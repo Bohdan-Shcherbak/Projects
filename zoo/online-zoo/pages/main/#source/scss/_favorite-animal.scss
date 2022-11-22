@@ -1,0 +1,64 @@
+@import '_colors.scss';
+
+.Watch-your-favorite-animal-online {
+    padding-top: 92px;
+
+    min-height: 780px;
+    background-image: url("../../images/Giant_Panda.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+
+    .wrapper-elipse {
+        height: 588px;
+        width: 573px;
+        margin-left: 50%;
+
+        .elipse-block {
+            position: relative;
+            height: 474px;
+
+            .elipse {
+                border-radius: 50%;
+                height: 465px;
+                width: 465px;
+                @extend %color-orange;
+            }
+
+            .elipse-text {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                font-family: $family;
+                font-weight: 700;
+                line-height: 80px;
+                font-size: 107px;
+                max-width: 500px;
+                text-align: center;
+                color: #fff;
+
+                span {
+                    color: #FFEE2E;
+                }
+            }
+        }
+
+        button {
+            margin-top: 60px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0px;
+            border-radius: 25px;
+
+
+            &:active {
+                background-color: #4B9200;
+            }
+        }
+    }
+
+
+
+
+
+}
