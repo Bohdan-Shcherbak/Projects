@@ -1,0 +1,110 @@
+.section2 {
+    // min-height: 617px;
+    padding-top: 140px;
+
+    .section2__main-block {
+        // margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        img {
+            display: block;
+            width: 609;
+            height: 403px;
+
+            @media (max-width:1300px) {
+                & {
+                    width: 500px;
+                }
+            }
+
+            @media (max-width:1000px) {
+                & {
+                    width: 455px;
+                    height: 408px;
+                }
+            }
+        }
+
+        .section2__text-block {
+            // margin-left: 87px;
+            max-width: 465px;
+
+            h2 {
+                font-family: $family;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 48px;
+                line-height: 120%;
+                color: #333B41;
+
+                @media (max-width:1000px) {
+                    & {}
+                }
+            }
+
+            .subtext {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 130%;
+                color: #333B41;
+                margin-top: 20px;
+            }
+
+            .two-header {
+                font-family: $family;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 120%;
+                color: #333B41;
+                margin-top: 54px;
+            }
+
+            .text {
+                font-family: $family;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 140%;
+                margin-top: 34px;
+            }
+        }
+    }
+
+    .flower {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 800px;
+
+        @media (max-width:1500px) {
+            & {
+                top: 950px;
+                width: 10%;
+            }
+        }
+
+        @media (max-width:1400px) {
+            & {
+                top: 1000px;
+                width: 7%;
+            }
+        }
+
+        @media (max-width:1300px) {
+            & {
+                top: 1060px;
+                width: 5%;
+            }
+        }
+
+        @media (max-width:1200px) {
+            & {
+                display: none;
+            }
+        }
+    }
+}

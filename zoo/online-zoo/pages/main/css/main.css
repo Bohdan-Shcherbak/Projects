@@ -33,7 +33,7 @@ h6 {
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body._lock {
@@ -45,7 +45,8 @@ body._lock {
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
-  height: auto;
+  height: 100%;
+  border: 1px solid red;
 }
 
 header {
@@ -63,15 +64,21 @@ header {
   }
 }
 header .background {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: #fff;
-  z-index: 2;
-  right: -100%;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  display: none;
+}
+@media (max-width: 800px) {
+  header .background {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 2;
+    right: -100%;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+  }
 }
 header .background._active {
   right: 0%;
@@ -376,54 +383,415 @@ header .header__container .link .link__Designed:active {
   }
 }
 
-.Watch-your-favorite-animal-online .wrapper-elipse .elipse-block .elipse {
+.Watch-your-favorite-animal-online .wrapper-elipse .bloci {
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
 }
 
 .Watch-your-favorite-animal-online {
   padding-top: 92px;
-  min-height: 780px;
-  background-image: url("../../images/Giant_Panda.png");
-  background-size: 100%;
+  padding-bottom: 100px;
+  height: 780px;
+  background-image: url("/my_Projects/zoo/online-zoo/pages/main/images/Giant_Panda.png");
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: top;
 }
+@media (max-width: 1250px) {
+  .Watch-your-favorite-animal-online {
+    font-size: 100px;
+  }
+}
+@media (max-width: 1000px) {
+  .Watch-your-favorite-animal-online {
+    height: 584px;
+    padding-bottom: 43px;
+    padding-top: 69px;
+  }
+}
+@media (max-width: 650px) {
+  .Watch-your-favorite-animal-online {
+    height: 373px;
+    padding-bottom: 43px;
+    padding-top: 45px;
+  }
+}
+@media (max-width: 500px) {
+  .Watch-your-favorite-animal-online {
+    padding-top: 80px;
+  }
+}
+@media (max-width: 400px) {
+  .Watch-your-favorite-animal-online {
+    height: 221px;
+    padding-bottom: 43px;
+    padding-top: 50px;
+  }
+}
 .Watch-your-favorite-animal-online .wrapper-elipse {
-  height: 588px;
-  width: 573px;
+  min-height: 100%;
+  height: 100%;
+  min-width: 50%;
   margin-left: 50%;
 }
-.Watch-your-favorite-animal-online .wrapper-elipse .elipse-block {
-  position: relative;
-  height: 474px;
+@media (max-width: 1000px) {
+  .Watch-your-favorite-animal-online .wrapper-elipse {
+    margin-left: 45%;
+  }
 }
-.Watch-your-favorite-animal-online .wrapper-elipse .elipse-block .elipse {
+@media (max-width: 800px) {
+  .Watch-your-favorite-animal-online .wrapper-elipse {
+    margin-left: 40%;
+    width: 40%;
+  }
+}
+@media (max-width: 650px) {
+  .Watch-your-favorite-animal-online .wrapper-elipse {
+    margin-left: 50%;
+    width: 40%;
+  }
+}
+.Watch-your-favorite-animal-online .wrapper-elipse .bloci {
+  width: 80%;
+  height: 80%;
   border-radius: 50%;
-  height: 465px;
-  width: 465px;
+  padding-top: 12%;
+  padding-left: 27%;
 }
-.Watch-your-favorite-animal-online .wrapper-elipse .elipse-block .elipse-text {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+@media (max-width: 800px) {
+  .Watch-your-favorite-animal-online .wrapper-elipse .bloci {
+    width: 100%;
+  }
+}
+@media (max-width: 650px) {
+  .Watch-your-favorite-animal-online .wrapper-elipse .bloci {
+    width: 78%;
+    height: 84%;
+  }
+}
+@media (max-width: 600px) {
+  .Watch-your-favorite-animal-online .wrapper-elipse .bloci {
+    width: 85%;
+    height: 84%;
+  }
+}
+@media (max-width: 500px) {
+  .Watch-your-favorite-animal-online .wrapper-elipse .bloci {
+    width: 80%;
+    height: 63%;
+  }
+}
+@media (max-width: 400px) {
+  .Watch-your-favorite-animal-online .wrapper-elipse .bloci {
+    width: 75%;
+    height: 100%;
+    padding-left: 20%;
+  }
+}
+.Watch-your-favorite-animal-online .wrapper-elipse .bloci .block1 {
+  width: auto;
+}
+.Watch-your-favorite-animal-online .wrapper-elipse .bloci .block1 .title {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   line-height: 80px;
   font-size: 107px;
-  max-width: 500px;
   text-align: center;
   color: #fff;
+  text-transform: uppercase;
+}
+@media (max-width: 1200px) {
+  .Watch-your-favorite-animal-online .wrapper-elipse .bloci .block1 .title {
+    font-size: 90px;
+  }
+}
+@media (max-width: 1000px) {
+  .Watch-your-favorite-animal-online .wrapper-elipse .bloci .block1 .title {
+    font-size: 85px;
+    line-height: 75%;
+  }
+}
+@media (max-width: 800px) {
+  .Watch-your-favorite-animal-online .wrapper-elipse .bloci .block1 .title {
+    font-size: 75px;
+    line-height: 75%;
+  }
+}
+@media (max-width: 650px) {
+  .Watch-your-favorite-animal-online .wrapper-elipse .bloci .block1 .title {
+    font-size: 54px;
+    line-height: 75%;
+  }
+}
+@media (max-width: 600px) {
+  .Watch-your-favorite-animal-online .wrapper-elipse .bloci .block1 .title {
+    font-size: 45px;
+    line-height: 75%;
+  }
+}
+@media (max-width: 500px) {
+  .Watch-your-favorite-animal-online .wrapper-elipse .bloci .block1 .title {
+    font-size: 35px;
+    line-height: 75%;
+  }
+}
+@media (max-width: 400px) {
+  .Watch-your-favorite-animal-online .wrapper-elipse .bloci .block1 .title {
+    font-size: 28px;
+    line-height: 75%;
+  }
+}
+.Watch-your-favorite-animal-online .wrapper-elipse .bloci .block1 p:nth-child(2) {
+  color: #FFEE2E;
+  text-align: center;
+  margin-left: -50px;
+}
+@media (max-width: 1000px) {
+  .Watch-your-favorite-animal-online .wrapper-elipse .bloci .block1 p:nth-child(2) {
+    margin-left: -40px;
+  }
+}
+@media (max-width: 650px) {
+  .Watch-your-favorite-animal-online .wrapper-elipse .bloci .block1 p:nth-child(2) {
+    margin-left: -25px;
+  }
+}
+@media (max-width: 400px) {
+  .Watch-your-favorite-animal-online .wrapper-elipse .bloci .block1 p:nth-child(2) {
+    margin-left: -12px;
+  }
+}
+.Watch-your-favorite-animal-online .wrapper-elipse .elipse-block {
+  height: 80%;
+  width: 100%;
+}
+.Watch-your-favorite-animal-online .wrapper-elipse .elipse-block .elipse {
+  border-radius: 50%;
+  height: 100%;
+  width: 78%;
+  z-index: 2;
+}
+.Watch-your-favorite-animal-online .wrapper-elipse .elipse-block .elipse-text {
+  margin-top: -78%;
+  margin-left: 12%;
+  width: 85%;
+  z-index: 5;
+}
+@media (max-width: 1000px) {
+  .Watch-your-favorite-animal-online .wrapper-elipse .elipse-block .elipse-text {
+    margin-top: -77%;
+  }
+}
+.Watch-your-favorite-animal-online .wrapper-elipse .elipse-block .elipse-text p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  line-height: 80px;
+  font-size: 107px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+@media (max-width: 1250px) {
+  .Watch-your-favorite-animal-online .wrapper-elipse .elipse-block .elipse-text p {
+    font-size: 90px;
+  }
+}
+@media (max-width: 1000px) {
+  .Watch-your-favorite-animal-online .wrapper-elipse .elipse-block .elipse-text p {
+    font-size: 85px;
+    line-height: 75%;
+  }
 }
 .Watch-your-favorite-animal-online .wrapper-elipse .elipse-block .elipse-text span {
   color: #FFEE2E;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  line-height: 80px;
+  font-size: 107px;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (max-width: 1250px) {
+  .Watch-your-favorite-animal-online .wrapper-elipse .elipse-block .elipse-text span {
+    font-size: 90px;
+  }
+}
+@media (max-width: 1000px) {
+  .Watch-your-favorite-animal-online .wrapper-elipse .elipse-block .elipse-text span {
+    font-size: 85px;
+    line-height: 75%;
+  }
 }
 .Watch-your-favorite-animal-online .wrapper-elipse button {
-  margin-top: 60px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0px;
-  border-radius: 25px;
+  display: block;
+  margin-left: 35%;
+  z-index: 1;
+  margin-top: 10%;
+}
+@media (max-width: 1200px) {
+  .Watch-your-favorite-animal-online .wrapper-elipse button {
+    margin-left: 30%;
+  }
+}
+@media (max-width: 1000px) {
+  .Watch-your-favorite-animal-online .wrapper-elipse button {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 650px) {
+  .Watch-your-favorite-animal-online .wrapper-elipse button {
+    position: relative;
+    margin-top: 0;
+    left: -130%;
+  }
+}
+@media (max-width: 500px) {
+  .Watch-your-favorite-animal-online .wrapper-elipse button {
+    top: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .Watch-your-favorite-animal-online .wrapper-elipse button {
+    position: absolute;
+    margin-left: 0;
+    top: 250px;
+    left: 5%;
+    width: 80%;
+  }
 }
 .Watch-your-favorite-animal-online .wrapper-elipse button:active {
   background-color: #4B9200;
+}
+
+.button-main {
+  cursor: pointer;
+  display: block;
+  width: 298px;
+  height: 54px;
+  position: relative;
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  color: #fff;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 5;
+  border-radius: 25px;
+}
+.button-main:active {
+  background: #4B9200;
+}
+.button-main::before {
+  content: "";
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #E47209;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  z-index: -5;
+  border-radius: 25px;
+}
+.button-main:hover::before {
+  opacity: 1;
+}
+
+.section2 {
+  padding-top: 140px;
+}
+.section2 .section2__main-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.section2 .section2__main-block img {
+  display: block;
+  width: 609;
+  height: 403px;
+}
+@media (max-width: 1300px) {
+  .section2 .section2__main-block img {
+    width: 500px;
+  }
+}
+@media (max-width: 1000px) {
+  .section2 .section2__main-block img {
+    width: 455px;
+    height: 408px;
+  }
+}
+.section2 .section2__main-block .section2__text-block {
+  max-width: 465px;
+}
+.section2 .section2__main-block .section2__text-block h2 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 120%;
+  color: #333B41;
+}
+.section2 .section2__main-block .section2__text-block .subtext {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #333B41;
+  margin-top: 20px;
+}
+.section2 .section2__main-block .section2__text-block .two-header {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  color: #333B41;
+  margin-top: 54px;
+}
+.section2 .section2__main-block .section2__text-block .text {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  margin-top: 34px;
+}
+.section2 .flower {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 800px;
+}
+@media (max-width: 1500px) {
+  .section2 .flower {
+    top: 950px;
+    width: 10%;
+  }
+}
+@media (max-width: 1400px) {
+  .section2 .flower {
+    top: 1000px;
+    width: 7%;
+  }
+}
+@media (max-width: 1300px) {
+  .section2 .flower {
+    top: 1060px;
+    width: 5%;
+  }
+}
+@media (max-width: 1200px) {
+  .section2 .flower {
+    display: none;
+  }
 }
