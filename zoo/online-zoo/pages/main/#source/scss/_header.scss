@@ -3,34 +3,12 @@ header {
     width: 100%;
     height: 80px;
     background-color: #000;
-    // overflow: hidden;
 
     @media (max-width:800px) {
         height: 34px;
     }
 
     align-items: center;
-
-    .background {
-        display: none;
-
-        @media (max-width:800px) {
-            display: block;
-            position: absolute;
-            top: 0;
-            width: 100%;
-            height: 100vh;
-            background-color: #fff;
-            z-index: 2;
-            right: -100%;
-            transition: all 1s;
-        }
-    }
-
-    .background._active {
-        right: 0%;
-        transition: all 1s;
-    }
 
     .header__container {
         color: #fff;
@@ -39,12 +17,32 @@ header {
         justify-content: space-between;
         align-items: center;
         height: 100%;
+        position: relative;
 
         @media (max-width:800px) {
             & {
                 flex-direction: column;
                 align-items: flex-start;
             }
+        }
+
+        .background {
+            // @media (max-width:800px) {
+            display: block;
+            position: fixed;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #fff;
+            z-index: 2;
+            right: -150%;
+            transition: all 1s;
+        }
+
+
+        .background._active {
+            right: 0%;
+            transition: all 1s;
         }
 
         .header__left {
