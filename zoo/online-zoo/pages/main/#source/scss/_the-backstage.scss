@@ -1,31 +1,30 @@
 .section2 {
-    // min-height: 617px;
     padding-top: 140px;
 
     @media (max-width:1000px) {
         & {
-            padding-top: 140px;
+            padding-top: 100px;
         }
     }
 
-    @media (max-width:650px) {
+    @media (max-width:640px) {
         & {
             padding-top: 60px;
         }
     }
 
-    @media (max-width:420px) {
+    @media (max-width:320px) {
         & {
             padding-top: 100px;
         }
     }
 
     .section2__main-block {
-        // margin: 0 auto;
         display: flex;
         justify-content: space-between;
+        overflow: hidden;
 
-        img {
+        .bamboo-cap {
             display: block;
             width: 609;
             height: 403px;
@@ -144,6 +143,26 @@
                 }
             }
         }
+
+        .flower__container {
+            display: none;
+
+            @media (max-width:320px) {
+                & {
+                    display: block;
+                    margin-top: 0px;
+                    margin-right: -65px;
+                    width: 105px;
+                    height: 217px;
+                }
+
+                .flower-320 {
+                    width: 100%;
+                    height: 100%;
+
+                }
+            }
+        }
     }
 
     .flower {
@@ -184,11 +203,11 @@
                 display: block;
                 height: 476px;
                 width: 100px;
-                top: 700px;
+                top: 600px;
             }
         }
 
-        @media (max-width:650px) {
+        @media (max-width:640px) {
             & {
                 top: 400px;
                 height: 400px;
@@ -202,21 +221,24 @@
             }
         }
 
-        @media (max-width:450px) {
+        @media (max-width:500px) {
             & {
-                width: 50px;
-                height: 200px;
-                top: 430px;
-
+                width: max;
+                height: max;
+                top: 45%;
             }
         }
 
         @media (max-width:400px) {
             & {
-                width: 30px;
-                // height: 100px;
-                top: 250px;
+                top: 33%;
+                // right: -45px;
+            }
+        }
 
+        @media (max-width:400px) {
+            & {
+                display: none;
             }
         }
     }
