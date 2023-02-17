@@ -41,12 +41,18 @@ body._lock {
 }
 
 .container {
-  max-width: 1160px;
+  max-width: 1200px;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
   height: 100%;
   border: 1px solid red;
-  // overflow: hidden;
 
+  // overflow: hidden;
+  @media (max-width:320px) {
+    & {
+      padding-left: 11px;
+      padding-right: 11px;
+    }
+  }
 }

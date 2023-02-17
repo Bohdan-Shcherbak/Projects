@@ -39,12 +39,18 @@ body._lock {
 }
 
 .container {
-  max-width: 1160px;
+  max-width: 1200px;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
   height: 100%;
   border: 1px solid red;
+}
+@media (max-width: 320px) {
+  .container {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
 }
 
 header {
@@ -56,7 +62,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
 }
-@media (max-width: 800px) {
+@media (max-width: 640px) {
   header {
     height: 34px;
   }
@@ -75,7 +81,7 @@ header .header__container {
   height: 100%;
   position: relative;
 }
-@media (max-width: 800px) {
+@media (max-width: 640px) {
   header .header__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -108,7 +114,7 @@ header .header__container .header__left {
   display: -ms-flexbox;
   display: flex;
 }
-@media (max-width: 800px) {
+@media (max-width: 640px) {
   header .header__container .header__left {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -160,7 +166,7 @@ header .header__container .header__left .logo .decoration {
     top: 42%;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 640px) {
   header .header__container .header__left .logo {
     font-weight: 400;
     font-size: 12px;
@@ -180,7 +186,7 @@ header .header__container .header__left .menu__icon {
   display: none;
   z-index: 10;
 }
-@media (max-width: 800px) {
+@media (max-width: 640px) {
   header .header__container .header__left .menu__icon {
     z-index: 5;
     display: block;
@@ -245,7 +251,7 @@ header .header__container .header__left .nav {
   margin-left: 63px;
   overflow: hidden;
 }
-@media (max-width: 800px) {
+@media (max-width: 640px) {
   header .header__container .header__left .nav {
     margin-left: 0px;
     margin-top: 30px;
@@ -268,7 +274,7 @@ header .header__container .header__left .nav .header__navigation {
       -ms-flex-align: center;
           align-items: center;
 }
-@media (max-width: 800px) {
+@media (max-width: 640px) {
   header .header__container .header__left .nav .header__navigation {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -296,10 +302,20 @@ header .header__container .header__left .nav .header__navigation {
 header .header__container .header__left .nav .header__navigation li {
   margin-left: 58px;
 }
-header .header__container .header__left .nav .header__navigation li:first-child {
-  margin-top: 0;
-}
 @media (max-width: 800px) {
+  header .header__container .header__left .nav .header__navigation li {
+    margin-left: 30px;
+  }
+}
+@media (max-width: 700px) {
+  header .header__container .header__left .nav .header__navigation li {
+    margin-left: 20px;
+  }
+}
+header .header__container .header__left .nav .header__navigation li:first-child {
+  margin-left: 0;
+}
+@media (max-width: 640px) {
   header .header__container .header__left .nav .header__navigation li {
     margin-left: 0px;
     margin-top: 10px;
@@ -315,7 +331,7 @@ header .header__container .header__left .nav .header__navigation a {
 header .header__container .header__left .nav .header__navigation a:hover {
   color: yellow;
 }
-@media (max-width: 800px) {
+@media (max-width: 640px) {
   header .header__container .header__left .nav .header__navigation a {
     color: #333B41;
   }
@@ -337,7 +353,7 @@ header .header__container .header__left .nav .header__navigation .active {
 header .header__container .link {
   z-index: 10;
 }
-@media (max-width: 800px) {
+@media (max-width: 640px) {
   header .header__container .link {
     margin-left: -200%;
     -webkit-transition: all 1s;
@@ -368,7 +384,7 @@ header .header__container .link .link__Designed:active {
   background-clip: text;
   text-fill-color: transparent;
 }
-@media (max-width: 800px) {
+@media (max-width: 640px) {
   header .header__container .link .link__Designed {
     font-weight: 400;
     font-size: 16px;
@@ -377,118 +393,127 @@ header .header__container .link .link__Designed:active {
   }
 }
 
-.Watch-your-favorite-animal-online .wrapper-elipse .bloci {
-  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-}
-
 .section3 .button-next, .section3 .button-prev {
   background: linear-gradient(113.96deg, #FA6F32 1.49%, #FE9013 101.44%);
 }
 
-.Watch-your-favorite-animal-online {
+.section1 {
   padding-top: 92px;
   padding-bottom: 100px;
+  width: 100%;
   height: 780px;
   background-image: url("/my_Projects/zoo/online-zoo/pages/main/images/Giant_Panda.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: top;
 }
-@media (max-width: 1250px) {
-  .Watch-your-favorite-animal-online {
-    font-size: 100px;
-  }
-}
 @media (max-width: 1000px) {
-  .Watch-your-favorite-animal-online {
+  .section1 {
     height: 584px;
     padding-bottom: 43px;
     padding-top: 69px;
   }
 }
-@media (max-width: 650px) {
-  .Watch-your-favorite-animal-online {
+@media (max-width: 640px) {
+  .section1 {
     height: 373px;
-    padding-bottom: 43px;
+    padding-bottom: 35px;
     padding-top: 45px;
   }
 }
-@media (max-width: 500px) {
-  .Watch-your-favorite-animal-online {
-    padding-top: 80px;
+@media (max-width: 400px) {
+  .section1 {
+    height: 300px;
   }
 }
-@media (max-width: 400px) {
-  .Watch-your-favorite-animal-online {
+@media (max-width: 320px) {
+  .section1 {
     height: 221px;
     padding-bottom: 43px;
     padding-top: 50px;
   }
 }
-.Watch-your-favorite-animal-online .wrapper-elipse {
-  min-height: 100%;
-  height: 100%;
-  min-width: 50%;
-  margin-left: 50%;
+.section1 .section1__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+.section1 .ellipse__container {
+  width: 50%;
+  height: 474px;
+  background-image: url("/my_Projects/zoo/online-zoo/pages/main/images/Ellipse.png");
+  background-repeat: no-repeat;
+  background-position: 0%;
+  background-size: 80%;
+  padding-top: 60px;
+  padding-left: 45px;
+}
+@media (max-width: 1100px) {
+  .section1 .ellipse__container {
+    background-size: 85%;
+  }
 }
 @media (max-width: 1000px) {
-  .Watch-your-favorite-animal-online .wrapper-elipse {
-    margin-left: 45%;
+  .section1 .ellipse__container {
+    margin-right: 60px;
+    width: 49%;
+    padding-left: 0px;
+  }
+}
+@media (max-width: 900px) {
+  .section1 .ellipse__container {
+    padding-left: 30px;
+    background-position: 20px 20px;
   }
 }
 @media (max-width: 800px) {
-  .Watch-your-favorite-animal-online .wrapper-elipse {
-    margin-left: 40%;
-    width: 40%;
+  .section1 .ellipse__container {
+    margin-right: 10px;
+    width: 55%;
+    background-position: 10px 15px;
+    background-size: 90%;
+    padding-top: 60px;
+    padding-left: 50px;
   }
 }
-@media (max-width: 650px) {
-  .Watch-your-favorite-animal-online .wrapper-elipse {
-    margin-left: 50%;
-    width: 40%;
+@media (max-width: 700px) {
+  .section1 .ellipse__container {
+    background-size: 97%;
+    padding-left: 20px;
   }
 }
-.Watch-your-favorite-animal-online .wrapper-elipse .bloci {
-  width: 80%;
-  height: 80%;
-  border-radius: 50%;
-  padding-top: 12%;
-  padding-left: 27%;
-}
-@media (max-width: 800px) {
-  .Watch-your-favorite-animal-online .wrapper-elipse .bloci {
-    width: 100%;
-  }
-}
-@media (max-width: 650px) {
-  .Watch-your-favorite-animal-online .wrapper-elipse .bloci {
-    width: 78%;
-    height: 84%;
-  }
-}
-@media (max-width: 600px) {
-  .Watch-your-favorite-animal-online .wrapper-elipse .bloci {
-    width: 85%;
-    height: 84%;
+@media (max-width: 640px) {
+  .section1 .ellipse__container {
+    background-position: 10px 0px;
+    background-size: 80%;
+    padding-top: 40px;
+    padding-bottom: 20px;
   }
 }
 @media (max-width: 500px) {
-  .Watch-your-favorite-animal-online .wrapper-elipse .bloci {
-    width: 80%;
-    height: 63%;
+  .section1 .ellipse__container {
+    background-position: 20px 0px;
+    background-size: 90%;
+    padding-left: 40px;
   }
 }
-@media (max-width: 400px) {
-  .Watch-your-favorite-animal-online .wrapper-elipse .bloci {
-    width: 75%;
-    height: 100%;
-    padding-left: 20%;
+@media (max-width: 320px) {
+  .section1 .ellipse__container {
+    padding-top: 25px;
+    margin-bottom: 20px;
   }
 }
-.Watch-your-favorite-animal-online .wrapper-elipse .bloci .block1 {
-  width: auto;
-}
-.Watch-your-favorite-animal-online .wrapper-elipse .bloci .block1 .title {
+.section1 .ellipse__container .title {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   line-height: 80px;
@@ -498,166 +523,100 @@ header .header__container .link .link__Designed:active {
   text-transform: uppercase;
 }
 @media (max-width: 1200px) {
-  .Watch-your-favorite-animal-online .wrapper-elipse .bloci .block1 .title {
+  .section1 .ellipse__container .title {
     font-size: 90px;
   }
 }
 @media (max-width: 1000px) {
-  .Watch-your-favorite-animal-online .wrapper-elipse .bloci .block1 .title {
+  .section1 .ellipse__container .title {
     font-size: 85px;
     line-height: 75%;
   }
 }
-@media (max-width: 800px) {
-  .Watch-your-favorite-animal-online .wrapper-elipse .bloci .block1 .title {
-    font-size: 75px;
+@media (max-width: 900px) {
+  .section1 .ellipse__container .title {
+    font-size: 70px;
     line-height: 75%;
   }
 }
-@media (max-width: 650px) {
-  .Watch-your-favorite-animal-online .wrapper-elipse .bloci .block1 .title {
+@media (max-width: 800px) {
+  .section1 .ellipse__container .title {
+    font-size: 70px;
+    line-height: 75%;
+  }
+}
+@media (max-width: 640px) {
+  .section1 .ellipse__container .title {
     font-size: 54px;
     line-height: 75%;
   }
 }
 @media (max-width: 600px) {
-  .Watch-your-favorite-animal-online .wrapper-elipse .bloci .block1 .title {
+  .section1 .ellipse__container .title {
     font-size: 45px;
     line-height: 75%;
+    max-width: 250px;
   }
 }
 @media (max-width: 500px) {
-  .Watch-your-favorite-animal-online .wrapper-elipse .bloci .block1 .title {
+  .section1 .ellipse__container .title {
     font-size: 35px;
     line-height: 75%;
   }
 }
 @media (max-width: 400px) {
-  .Watch-your-favorite-animal-online .wrapper-elipse .bloci .block1 .title {
+  .section1 .ellipse__container .title {
+    max-width: 130px;
+    font-size: 30px;
+    line-height: 75%;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 320px) {
+  .section1 .ellipse__container .title {
     font-size: 28px;
     line-height: 75%;
+    margin-bottom: 20px;
   }
 }
-.Watch-your-favorite-animal-online .wrapper-elipse .bloci .block1 p:nth-child(2) {
+.section1 .ellipse__container .title span {
   color: #FFEE2E;
-  text-align: center;
-  margin-left: -50px;
+}
+.section1 .button__container {
+  margin-right: 10%;
 }
 @media (max-width: 1000px) {
-  .Watch-your-favorite-animal-online .wrapper-elipse .bloci .block1 p:nth-child(2) {
-    margin-left: -40px;
+  .section1 .button__container {
+    margin-right: 14%;
   }
 }
-@media (max-width: 650px) {
-  .Watch-your-favorite-animal-online .wrapper-elipse .bloci .block1 p:nth-child(2) {
-    margin-left: -25px;
+@media (max-width: 800px) {
+  .section1 .button__container {
+    margin-right: 55px;
+  }
+}
+@media (max-width: 700px) {
+  .section1 .button__container {
+    margin-right: 20px;
+  }
+}
+@media (max-width: 640px) {
+  .section1 .button__container {
+    margin-left: 0px;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
   }
 }
 @media (max-width: 400px) {
-  .Watch-your-favorite-animal-online .wrapper-elipse .bloci .block1 p:nth-child(2) {
-    margin-left: -12px;
-  }
-}
-.Watch-your-favorite-animal-online .wrapper-elipse .elipse-block {
-  height: 80%;
-  width: 100%;
-}
-.Watch-your-favorite-animal-online .wrapper-elipse .elipse-block .elipse {
-  border-radius: 50%;
-  height: 100%;
-  width: 78%;
-  z-index: 2;
-}
-.Watch-your-favorite-animal-online .wrapper-elipse .elipse-block .elipse-text {
-  margin-top: -78%;
-  margin-left: 12%;
-  width: 85%;
-  z-index: 5;
-}
-@media (max-width: 1000px) {
-  .Watch-your-favorite-animal-online .wrapper-elipse .elipse-block .elipse-text {
-    margin-top: -77%;
-  }
-}
-.Watch-your-favorite-animal-online .wrapper-elipse .elipse-block .elipse-text p {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  line-height: 80px;
-  font-size: 107px;
-  text-align: center;
-  color: #fff;
-  text-transform: uppercase;
-}
-@media (max-width: 1250px) {
-  .Watch-your-favorite-animal-online .wrapper-elipse .elipse-block .elipse-text p {
-    font-size: 90px;
-  }
-}
-@media (max-width: 1000px) {
-  .Watch-your-favorite-animal-online .wrapper-elipse .elipse-block .elipse-text p {
-    font-size: 85px;
-    line-height: 75%;
-  }
-}
-.Watch-your-favorite-animal-online .wrapper-elipse .elipse-block .elipse-text span {
-  color: #FFEE2E;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  line-height: 80px;
-  font-size: 107px;
-  text-align: center;
-  text-transform: uppercase;
-}
-@media (max-width: 1250px) {
-  .Watch-your-favorite-animal-online .wrapper-elipse .elipse-block .elipse-text span {
-    font-size: 90px;
-  }
-}
-@media (max-width: 1000px) {
-  .Watch-your-favorite-animal-online .wrapper-elipse .elipse-block .elipse-text span {
-    font-size: 85px;
-    line-height: 75%;
-  }
-}
-.Watch-your-favorite-animal-online .wrapper-elipse button {
-  display: block;
-  margin-left: 35%;
-  z-index: 1;
-  margin-top: 10%;
-}
-@media (max-width: 1200px) {
-  .Watch-your-favorite-animal-online .wrapper-elipse button {
-    margin-left: 30%;
-  }
-}
-@media (max-width: 1000px) {
-  .Watch-your-favorite-animal-online .wrapper-elipse button {
-    margin-top: 40px;
-  }
-}
-@media (max-width: 650px) {
-  .Watch-your-favorite-animal-online .wrapper-elipse button {
-    position: relative;
-    margin-top: 0;
-    left: -130%;
-  }
-}
-@media (max-width: 500px) {
-  .Watch-your-favorite-animal-online .wrapper-elipse button {
-    top: 20px;
+  .section1 .button__container {
+    width: 100%;
   }
 }
 @media (max-width: 400px) {
-  .Watch-your-favorite-animal-online .wrapper-elipse button {
-    position: absolute;
-    margin-left: 0;
-    top: 250px;
-    left: 5%;
-    width: 80%;
+  .section1 .button__container button {
+    width: 100%;
   }
-}
-.Watch-your-favorite-animal-online .wrapper-elipse button:active {
-  background-color: #4B9200;
 }
 
 .button-main {
