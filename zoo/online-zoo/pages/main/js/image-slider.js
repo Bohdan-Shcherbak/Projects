@@ -24,11 +24,12 @@ const myImageSlider = new Swiper('.image-slider', {
     breakpoints: {
         0: {
             slidesPerView: 4,
+            autoHeight: false,
 
             // slidesPerGroup: 1,
             // loop: true,
             // freeMode: false,
-            spaceBetween: 150,
+            spaceBetween: 20,
             simulateTouch: true,
             touchRatio: 1,
             touchAngle: 45,
@@ -37,25 +38,34 @@ const myImageSlider = new Swiper('.image-slider', {
 
         },
 
-        400: {
+        401: {
             slidesPerView: 2,
             grid: {
                 rows: 2,
             },
-            spaceBetween: 10,
+            spaceBetween: 29.5,
             simulateTouch: false,
-            direction: 'horisontal',
+            // direction: 'horisontal',
 
 
 
         },
 
-        650: {
+        641: {
             slidesPerView: 3,
             grid: {
                 rows: 2,
             },
-            spaceBetween: 25,
+
+            spaceBetween: 29,
+        },
+
+        1001: {
+            slidesPerView: 3,
+            grid: {
+                rows: 2,
+            },
+            spaceBetween: 30,
         }
     }
 })
