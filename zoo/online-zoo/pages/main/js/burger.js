@@ -56,33 +56,33 @@
 
 // }
 
-const iconMenu = document.querySelector('.menu__icon');
-// const iconmenu = document.getElementById('menu__icon')
-const nav = document.querySelector('.nav');
-const navigation = document.querySelector('.header__navigation');
-const link = document.querySelector('.link');
-const background = document.querySelector('.background');
-const logo = document.querySelector('.logo');
+const headerIcon = document.querySelector('.burger__icon');
+// const iconmenu = document.getElementById('#burger__icon')
+const nav = document.querySelector('.header__menu');
+const navigation = document.querySelector('.menu__list');
 
+// const link = document.querySelector('.header__designed');
+// const logo = document.querySelector('.logo');
+const bodyLock = document.querySelector('body');
 
 const activation = function () {
-    if (iconMenu.classList.contains('_active') == true) {
+    if (headerIcon.classList.contains('_active') == true) {
         navigation.classList.remove('_active');
-        link.classList.remove('_active');
-        setTimeout(() => background.classList.toggle('_active'), 1000);
+        bodyLock.classList.remove('_.lock');
+        // link.classList.remove('_active');
         setTimeout(() => nav.classList.toggle('_active'), 1000);
-        setTimeout(() => logo.classList.toggle('_active'), 1000);
-        setTimeout(() => iconMenu.classList.toggle('_active'), 1500);
+        // setTimeout(() => logo.classList.toggle('_active'), 1000);
+        setTimeout(() => headerIcon.classList.toggle('_active'), 1500);
 
     } else {
+        bodyLock.classList.add('_.lock');
         setTimeout(() => navigation.classList.toggle('_active'), 1000);
         setTimeout(() => link.classList.toggle('_active'), 1000);
-        background.classList.add('_active');
-        logo.classList.add('_active');
+        // logo.classList.add('_active');
         nav.classList.add('_active');
-        iconMenu.classList.add('_active');
+        headerIcon.classList.add('_active');
     }
 }
-iconMenu.addEventListener("click", activation);
+headerIcon.addEventListener("click", activation);
 
 

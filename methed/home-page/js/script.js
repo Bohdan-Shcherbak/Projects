@@ -34,6 +34,7 @@ function windowLoad() {
                 const activeTabItem = document.querySelector('.popular__tab.active')
 
                 activeTabItem.classList.remove('active');
+                console.log(tabItems[getIndex(tabNavItem)]);
                 tabItems[getIndex(tabNavItem)].classList.add('active');
             }
         }

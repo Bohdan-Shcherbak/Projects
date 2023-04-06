@@ -115,7 +115,7 @@
     background-color: #fff;
     border-radius: 50%;
     opacity: 0.2;
-    transform: opacity 0.3s;
+    transition: opacity 0.3s;
     cursor: pointer;
 }
 
@@ -272,6 +272,7 @@
 
 .item-popular__image:hover img {
     transform: scale(1.05);
+    /* transform: translate(100px, 100px); */
 }
 
 .item-popular__date {

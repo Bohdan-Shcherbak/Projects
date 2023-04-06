@@ -448,16 +448,18 @@ body {
 .stay-safe__container {
     display: flex;
     align-items: center;
+    outline: 1px solid red
 }
 
 .stay-safe__media {
     flex: 0 1 50%;
     padding: 0px 0px 0px 47px;
-
+    outline: 1px solid green
 }
 
 .stay-safe__content {
     flex: 0 1 50%;
+    outline: 1px solid green
 }
 
 .media-stay-safe {

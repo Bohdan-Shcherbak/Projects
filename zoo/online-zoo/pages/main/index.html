@@ -11,438 +11,358 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"> -->
     <!-- <link rel="stylesheet" href="./css/main-style.css"> -->
-    <link rel="stylesheet" href="/my_Projects/node_modules/swiper/swiper-bundle.min.css">
+    <!-- <link rel="stylesheet" href="/my_Projects/node_modules/swiper/swiper-bundle.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="./js/swiper-bundle.min.css">
+
     <link rel="stylesheet" href="./css/main.css">
+    <!-- <link rel="stylesheet" href="/my_Projects/node_modules/swiper/modules/grid/grid.js"> -->
+    <!-- <link rel="stylesheet" href="/my_Projects/node_modules/swiper/modules/grid/grid.min.css"> -->
+
 </head>
 
 <body>
-    <header>
-        <div class="header__container container">
-            <div class="background"></div>
-            <div class="header__left">
-                <a href="#" class="logo">PetStory <img class="decoration" src="./images/bamboo.png" alt="">
-                    online</a>
-                <div class="menu__icon" id="menu__icon">
-                    <span></span>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__left">
+                    <a href="#" class="header__logo">
+                        <img src="./images/logo_footer.png" alt="logo">
+                    </a>
+                    <nav class="header__menu">
+                        <ul class="menu__list">
+                            <li class="menu__item"><a href="#" class="menu__link active">About</a></li>
+                            <li class="menu__item"><a href="#" class="menu__link">Map</a></li>
+                            <li class="menu__item"><a href="#" class="menu__link">Zoos</a></li>
+                            <li class="menu__item"><a href="#" class="menu__link">Donate</a></li>
+                            <li class="menu__item"><a href="#" class="menu__link">Contact us</a></li>
+                            <li class="menu__item hidden_link"><a
+                                    href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online"
+                                    class="menu__link">Designed by ©</a></li>
+                        </ul>
+                    </nav>
                 </div>
-                <nav class="nav">
-                    <ul class="header__navigation">
-                        <li><a class="active" href="#"> About</a></li>
-                        <li><a href="#">Map</a></li>
-                        <li><a href="#">Zoos</a></li>
-                        <li><a href="#">Donate</a></li>
-                        <li><a href="#">Contact us</a></li>
-                    </ul>
-                </nav>
+                <div class="header__designed">
+                    <a class="designed__link"
+                        href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">Designed
+                        by ©</a>
+                    <div class="burger__icon" id="burger__icon">
+                        <span></span>
+                    </div>
+                </div>
             </div>
-            <div class="link"><a class="link__Designed"
-                    href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">Designed
-                    by ©</a> </div>
-        </div>
+            <script src="./js/burger.js"></script>
+        </header>
+        <main>
+            <section class="watch">
+                <div class="watch__body">
+                    <div class="watch__ellipse">
+                        <img src="./images/Ellipse.png" class="ellipse__image" alt="elipse"></img>
+                    </div>
+                    <div class="watch__text">
+                        <p class="watch__title">Watch your <span>favorite</span> animal online</p>
+                    </div>
+                    <div class="watch__button">
+                        <button class="button-main" type="button">Button</button>
+                    </div>
 
-
-        <script src="./js/burger.js"></script>
-    </header>
-    <main>
-
-        <section class="section1">
-            <div class="container section1__container">
-                <div class="ellipse__container">
-                    <p class="title">Watch your <span>favorite</span> animal online</p>
                 </div>
-                <div class="button__container">
-                    <button class="button-main" type="button">Button</button>
+            </section>
+            <section class="section2">
+                <div class="section2__main-block container">
+                    <img class="bamboo-cap" src="./images/bamboo-cap.png" alt="bamboo">
+                    <div class="section2__text-block">
+                        <h2>The Backstage of the Wilderness World.</h2>
+                        <p class="subtext">The site was founded on the basis of a volunteer movement to protect and care
+                            for
+                            animals.</p>
+                        <p class="two-header">How it works </p>
+                        <p class="text">The main goal is to help the animals, as well as the nature reserves and zoos
+                            where
+                            they
+                            are kept. We
+                            are
+                            currently working on video projects targeting pandas in China, eagles on an island near Los
+                            Angeles,
+                            alligators in Florida and gorillas in the Congo. These have a total of more than 1,500
+                            mammals
+                            and
+                            reptiles.</p>
+                    </div>
+                    <div class="flower__container">
+                        <img class="flower-320" src="./images/flower_foto1.png" alt="flower">
+                    </div>
                 </div>
+                <img class="flower" src="./images/flower_foto1.png" alt="flower">
+            </section>
+            <section class="section3">
+                <!-- <div class="button-prev">
+                    <div class="button-prev-arrow">
+                        <div class=""></div>
+                    </div>
+                </div> -->
+                <div class="image-slider swiper">
+                    <div class="image-slider__wrapper swiper-wrapper">
+                        <div class="image-slider__slide swiper-slide">
+                            <div class="image-slider__card">
+                                <div class="card__image">
+                                    <img src="./images/slides/Rectangle1.png" alt="">
+                                </div>
+                                <div class="card__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
+                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
+                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-slider__slide swiper-slide">
+                            <div class="image-slider__card">
+                                <div class="card__image">
+                                    <img src="./images/slides/Rectangle1.png" alt="">
+                                </div>
+                                <div class="card__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
+                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
+                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-slider__slide swiper-slide">
+                            <div class="image-slider__card">
+                                <div class="card__image">
+                                    <img src="./images/slides/Rectangle1.png" alt="">
+                                </div>
+                                <div class="card__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
+                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
+                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-slider__slide swiper-slide">
+                            <div class="image-slider__card">
+                                <div class="card__image">
+                                    <img src="./images/slides/Rectangle1.png" alt="">
+                                </div>
+                                <div class="card__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
+                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
+                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-slider__slide swiper-slide">
+                            <div class="image-slider__card">
+                                <div class="card__image">
+                                    <img src="./images/slides/Rectangle1.png" alt="">
+                                </div>
+                                <div class="card__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
+                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
+                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-slider__slide swiper-slide">
+                            <div class="image-slider__card">
+                                <div class="card__image">
+                                    <img src="./images/slides/Rectangle1.png" alt="">
+                                </div>
+                                <div class="card__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
+                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
+                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-slider__slide swiper-slide">
+                            <div class="image-slider__card">
+                                <div class="card__image">
+                                    <img src="./images/slides/Rectangle1.png" alt="">
+                                </div>
+                                <div class="card__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
+                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
+                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-slider__slide swiper-slide">
+                            <div class="image-slider__card">
+                                <div class="card__image">
+                                    <img src="./images/slides/Rectangle1.png" alt="">
+                                </div>
+                                <div class="card__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
+                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
+                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-slider__slide swiper-slide">
+                            <div class="image-slider__card">
+                                <div class="card__image">
+                                    <img src="./images/slides/Rectangle1.png" alt="">
+                                </div>
+                                <div class="card__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
+                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
+                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-slider__slide swiper-slide">
+                            <div class="image-slider__card">
+                                <div class="card__image">
+                                    <img src="./images/slides/Rectangle1.png" alt="">
+                                </div>
+                                <div class="card__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
+                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
+                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-slider__slide swiper-slide">
+                            <div class="image-slider__card">
+                                <div class="card__image">
+                                    <img src="./images/slides/Rectangle1.png" alt="">
+                                </div>
+                                <div class="card__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
+                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
+                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-slider__slide swiper-slide">
+                            <div class="image-slider__card">
+                                <div class="card__image">
+                                    <img src="./images/slides/Rectangle1.png" alt="">
+                                </div>
+                                <div class="card__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
+                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
+                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-slider__slide swiper-slide">
+                            <div class="image-slider__card">
+                                <div class="card__image">
+                                    <img src="./images/slides/Rectangle1.png" alt="">
+                                </div>
+                                <div class="card__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
+                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
+                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-slider__slide swiper-slide">
+                            <div class="image-slider__card">
+                                <div class="card__image">
+                                    <img src="./images/slides/Rectangle1.png" alt="">
+                                </div>
+                                <div class="card__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
+                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
+                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-slider__slide swiper-slide">
+                            <div class="image-slider__card">
+                                <div class="card__image">
+                                    <img src="./images/slides/Rectangle1.png" alt="">
+                                </div>
+                                <div class="card__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
+                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
+                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-slider__slide swiper-slide">
+                            <div class="image-slider__card">
+                                <div class="card__image">
+                                    <img src="./images/slides/Rectangle1.png" alt="">
+                                </div>
+                                <div class="card__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
+                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
+                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <script src="./js/swiper-bundle.min.js"></script>
+                    <script src="./js/image-slider.js"></script>
+                </div>
+            </section>
 
-            </div>
-        </section>
-        <section class="section2">
-            <div class="section2__main-block container">
-                <img class="bamboo-cap" src="./images/bamboo-cap.png" alt="bamboo">
-                <div class="section2__text-block">
-                    <h2>The Backstage of the Wilderness World.</h2>
-                    <p class="subtext">The site was founded on the basis of a volunteer movement to protect and care for
-                        animals.</p>
-                    <p class="two-header">How it works </p>
-                    <p class="text">The main goal is to help the animals, as well as the nature reserves and zoos where
-                        they
-                        are kept. We
-                        are
-                        currently working on video projects targeting pandas in China, eagles on an island near Los
-                        Angeles,
-                        alligators in Florida and gorillas in the Congo. These have a total of more than 1,500 mammals
+
+            <section class="section4">
+                <div class="feed-a-friend__container">
+                    <h3 class="feed-a-friend__title">Pick and feed a friend</h3>
+                    <p class="feed-a-friend__subtitle">We know the animals bring you joy, and in these extraordinary
+                        times, we’re glad.
+                    </p>
+                    <p class="feed-a-friend__bold-text">During a time when the COVID-19 epidemic is touching all of our
+                        lives, we’re
+                        proud
                         and
-                        reptiles.</p>
-                </div>
-                <div class="flower__container">
-                    <img class="flower-320" src="./images/flower_foto1.png" alt="flower">
-                </div>
-            </div>
-            <img class="flower" src="./images/flower_foto1.png" alt="flower">
-        </section>
-        <section class="section3">
-            <!-- <div class="grid-container"> -->
-            <div class="left-container">
-                <div class="button-prev">
-                    <div class="button-prev-arrow">
-                        <div class=""></div>
-                    </div>
-                </div>
-                <div class="palm-box"> <img class="palm" src="./images/palm_foto.png" alt="palm"></div>
-            </div>
-            <div class="middle-container">
-                <div class="image-slider swiper container">
-                    <div class="image-slider__wrapper swiper-wrapper">
-                        <div class="image-slider__slide swiper-slide" id="1">
-                            <div class="image-slider__card">
-                                <img src="./images/slides/Rectangle5.png" class="card-image" alt="image">
-                                <div class="card-description">
-                                    <p class="card-tittle">giant Pandas<br></p>
-                                    <p class="card-text">Native to Southwest China</p>
-                                    <img src="./images/slides/banana-bamboo_icon.png" alt="banana"
-                                        class="card-icon-banana">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-slider__slide swiper-slide" id="2">
-                            <div class="image-slider__card">
-                                <img src="./images/slides/Rectangle2.png" class="card-image" alt="image">
-                                <div class="card-description">
-                                    <p class="card-tittle">Eagles<br></p>
-                                    <p class="card-text">Native to South America</p>
-                                    <img src="./images/slides/banana-bamboo_icon.png" alt="banana"
-                                        class="card-icon-banana">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-slider__slide swiper-slide" id="3">
-                            <div class="image-slider__card">
-                                <img src="./images/slides/Rectangle1.png" class="card-image" alt="image">
-                                <div class="card-description">
-                                    <p class="card-tittle">Gorillas<br></p>
-                                    <p class="card-text">Native to Congo</p>
-                                    <img src="./images/slides/meet-fish_icon.png" alt="banana" class="card-icon-banana">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-slider__slide swiper-slide">
-                            <div class="image-slider__card">
-                                <img src="./images/slides/Rectangle3.png" class="card-image" alt="image">
-                                <div class="card-description">
-                                    <p class="card-tittle">cheetahs<br></p>
-                                    <p class="card-text">Native to Africa</p>
-                                    <img src="./images/slides/meet-fish_icon.png" alt="banana" class="card-icon-banana">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-slider__slide swiper-slide">
-                            <div class="image-slider__card">
-                                <img src="./images/slides/Rectangle4.png" class="card-image" alt="image">
-                                <div class="card-description">
-                                    <p class="card-tittle">cheetahs<br></p>
-                                    <p class="card-text">Native to Africa</p>
-                                    <img src="./images/slides/banana-bamboo_icon.png" alt="banana"
-                                        class="card-icon-banana">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-slider__slide swiper-slide">
-                            <div class="image-slider__card">
-                                <img src="./images/slides/Rectangle0.png" class="card-image" alt="image">
-                                <div class="card-description">
-                                    <p class="card-tittle">Penguins<br></p>
-                                    <p class="card-text">Native to Antarctica</p>
-                                    <img src="./images/slides/meet-fish_icon.png" alt="banana" class="card-icon-banana">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-slider__slide swiper-slide">
-                            <div class="image-slider__card">
-                                <img src="./images/slides/Rectangle5.png" class="card-image" alt="image">
-                                <div class="card-description">
-                                    <p class="card-tittle">giant Pandas<br></p>
-                                    <p class="card-text">Native to Southwest China</p>
-                                    <img src="./images/slides/banana-bamboo_icon.png" alt="banana"
-                                        class="card-icon-banana">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-slider__slide swiper-slide">
-                            <div class="image-slider__card">
-                                <img src="./images/slides/Rectangle2.png" class="card-image" alt="image">
-                                <div class="card-description">
-                                    <p class="card-tittle">Eagles<br></p>
-                                    <p class="card-text">Native to South America</p>
-                                    <img src="./images/slides/banana-bamboo_icon.png" alt="banana"
-                                        class="card-icon-banana">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-slider__slide swiper-slide">
-                            <div class="image-slider__card">
-                                <img src="./images/slides/Rectangle1.png" class="card-image" alt="image">
-                                <div class="card-description">
-                                    <p class="card-tittle">Gorillas<br></p>
-                                    <p class="card-text">Native to Congo</p>
-                                    <img src="./images/slides/meet-fish_icon.png" alt="banana" class="card-icon-banana">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-slider__slide swiper-slide">
-                            <div class="image-slider__card">
-                                <img src="./images/slides/Rectangle3.png" class="card-image" alt="image">
-                                <div class="card-description">
-                                    <p class="card-tittle">Two-toed Sloth<br></p>
-                                    <p class="card-text">Mesoamerica, South America</p>
-                                    <img src="./images/slides/meet-fish_icon.png" alt="banana" class="card-icon-banana">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-slider__slide swiper-slide">
-                            <div class="image-slider__card">
-                                <img src="./images/slides/Rectangle4.png" class="card-image" alt="image">
-                                <div class="card-description">
-                                    <p class="card-tittle">cheetahs<br></p>
-                                    <p class="card-text">Native to Africa</p>
-                                    <img src="./images/slides/banana-bamboo_icon.png" alt="banana"
-                                        class="card-icon-banana">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-slider__slide swiper-slide">
-                            <div class="image-slider__card">
-                                <img src="./images/slides/Rectangle0.png" class="card-image" alt="image">
-                                <div class="card-description">
-                                    <p class="card-tittle">Penguins<br></p>
-                                    <p class="card-text">Native to Antarctica</p>
-                                    <img src="./images/slides/meet-fish_icon.png" alt="banana" class="card-icon-banana">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button type="button" class="button-main">choose your favorite</button>
-            </div>
-            <div class="right-container">
-                <div class="button-next">
-                    <div class="button-next-arrow">
-                        <div class=""></div>
-                    </div>
-                </div>
-                <div class="strelitzia-box"><img class="strelitzia" src="./images/strelitzia.png" alt="strelitzia">
-                </div>
-            </div>
+                        glad that people
+                        around the world find joy in PetStory.</p>
+                    <p class="feed-a-friend__text">Even though the zoo has reopened, we need you now more than ever to
+                        help us deal
+                        with
+                        these
+                        problems.
+                        Please consider a gift to our <a href="#">Emergency Support Fund </a>. </p>
 
-
-            <!-- <picture>
-                <source srcset="img" type="image/jpeg" media="(max-width">
-                
-            </picture> -->
-            <!-- </div> -->
-            <script src="/my_Projects/node_modules/swiper/swiper-bundle.min.js"></script>
-
-            <script src="./js/image-slider.js"></script>
-        </section>
-        <!-- <section class="section3">
-            <div class="grid-container">
-                <div class="button-prev">
-                    <div class="button-prev-arrow">
-                        <div class=""></div>
+                    <p class="feed-a-friend__second-title">How it works</p>
+                    <div class="feed-a-friend__scheme">
+                        <div class="scheme__item">
+                            <div class="scheme__item-image">
+                                <img src="./images/scheme/pay.png" alt="pay">
+                            </div>
+                            <div class="scheme__text">
+                                <p>Pay with card
+                                </p>
+                            </div>
+                        </div>
+                        <div class="scheme__arrow-container">
+                            <img src="./images/scheme/Vector.png" alt="">
+                        </div>
+                        <div class="scheme__item scheme__item_arrow">
+                            <div class="scheme__item-image">
+                                <img src="./images/scheme/payment-goes.png" alt="payment-goes">
+                            </div>
+                            <div class="scheme__text">
+                                <p>Payment goes to the zoo</p>
+                            </div>
+                        </div>
+                        <div class="scheme__arrow-container">
+                            <img src="./images/scheme/Vector.png" alt="">
+                        </div>
+                        <div class="scheme__item scheme__item_arrow">
+                            <div class="scheme__item-image">
+                                <img src="./images/scheme/monkey.png" alt="monkey">
+                            </div>
+                            <div class="scheme__text">
+                                <p>Your favourite animal gets delicious dish</p>
+                            </div>
+                        </div>
                     </div>
+                    <button class="button-main">Feed a friend now</button>
+
                 </div>
-                <div class="image-slider swiper container">
-                    <div class="image-slider__wrapper swiper-wrapper">
-                        <div class="image-slider__slide swiper-slide" id="1">
-                            <div class="image-slider__card">
-                                <img src="./images/slides/Rectangle5.png" class="card-image" alt="image">
-                                <div class="card-description">
-                                    <p class="card-tittle">giant Pandas<br></p>
-                                    <p class="card-text">Native to Southwest China</p>
-                                    <img src="./images/slides/banana-bamboo_icon.png" alt="banana"
-                                        class="card-icon-banana">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-slider__slide swiper-slide" id="2">
-                            <div class="image-slider__card">
-                                <img src="./images/slides/Rectangle2.png" class="card-image" alt="image">
-                                <div class="card-description">
-                                    <p class="card-tittle">Eagles<br></p>
-                                    <p class="card-text">Native to South America</p>
-                                    <img src="./images/slides/banana-bamboo_icon.png" alt="banana"
-                                        class="card-icon-banana">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-slider__slide swiper-slide" id="3">
-                            <div class="image-slider__card">
-                                <img src="./images/slides/Rectangle1.png" class="card-image" alt="image">
-                                <div class="card-description">
-                                    <p class="card-tittle">Gorillas<br></p>
-                                    <p class="card-text">Native to Congo</p>
-                                    <img src="./images/slides/meet-fish_icon.png" alt="banana" class="card-icon-banana">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-slider__slide swiper-slide">
-                            <div class="image-slider__card">
-                                <img src="./images/slides/Rectangle3.png" class="card-image" alt="image">
-                                <div class="card-description">
-                                    <p class="card-tittle">cheetahs<br></p>
-                                    <p class="card-text">Native to Africa</p>
-                                    <img src="./images/slides/meet-fish_icon.png" alt="banana" class="card-icon-banana">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-slider__slide swiper-slide">
-                            <div class="image-slider__card">
-                                <img src="./images/slides/Rectangle4.png" class="card-image" alt="image">
-                                <div class="card-description">
-                                    <p class="card-tittle">cheetahs<br></p>
-                                    <p class="card-text">Native to Africa</p>
-                                    <img src="./images/slides/banana-bamboo_icon.png" alt="banana"
-                                        class="card-icon-banana">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-slider__slide swiper-slide">
-                            <div class="image-slider__card">
-                                <img src="./images/slides/Rectangle0.png" class="card-image" alt="image">
-                                <div class="card-description">
-                                    <p class="card-tittle">Penguins<br></p>
-                                    <p class="card-text">Native to Antarctica</p>
-                                    <img src="./images/slides/meet-fish_icon.png" alt="banana" class="card-icon-banana">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-slider__slide swiper-slide">
-                            <div class="image-slider__card">
-                                <img src="./images/slides/Rectangle5.png" class="card-image" alt="image">
-                                <div class="card-description">
-                                    <p class="card-tittle">giant Pandas<br></p>
-                                    <p class="card-text">Native to Southwest China</p>
-                                    <img src="./images/slides/banana-bamboo_icon.png" alt="banana"
-                                        class="card-icon-banana">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-slider__slide swiper-slide">
-                            <div class="image-slider__card">
-                                <img src="./images/slides/Rectangle2.png" class="card-image" alt="image">
-                                <div class="card-description">
-                                    <p class="card-tittle">Eagles<br></p>
-                                    <p class="card-text">Native to South America</p>
-                                    <img src="./images/slides/banana-bamboo_icon.png" alt="banana"
-                                        class="card-icon-banana">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-slider__slide swiper-slide">
-                            <div class="image-slider__card">
-                                <img src="./images/slides/Rectangle1.png" class="card-image" alt="image">
-                                <div class="card-description">
-                                    <p class="card-tittle">Gorillas<br></p>
-                                    <p class="card-text">Native to Congo</p>
-                                    <img src="./images/slides/meet-fish_icon.png" alt="banana" class="card-icon-banana">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-slider__slide swiper-slide">
-                            <div class="image-slider__card">
-                                <img src="./images/slides/Rectangle3.png" class="card-image" alt="image">
-                                <div class="card-description">
-                                    <p class="card-tittle">Two-toed Sloth<br></p>
-                                    <p class="card-text">Mesoamerica, South America</p>
-                                    <img src="./images/slides/meet-fish_icon.png" alt="banana" class="card-icon-banana">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-slider__slide swiper-slide">
-                            <div class="image-slider__card">
-                                <img src="./images/slides/Rectangle4.png" class="card-image" alt="image">
-                                <div class="card-description">
-                                    <p class="card-tittle">cheetahs<br></p>
-                                    <p class="card-text">Native to Africa</p>
-                                    <img src="./images/slides/banana-bamboo_icon.png" alt="banana"
-                                        class="card-icon-banana">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-slider__slide swiper-slide">
-                            <div class="image-slider__card">
-                                <img src="./images/slides/Rectangle0.png" class="card-image" alt="image">
-                                <div class="card-description">
-                                    <p class="card-tittle">Penguins<br></p>
-                                    <p class="card-text">Native to Antarctica</p>
-                                    <img src="./images/slides/meet-fish_icon.png" alt="banana" class="card-icon-banana">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="button-next">
-                    <div class="button-next-arrow">
-                        <div class=""></div>
-                    </div>
-                </div>
-                
-                <div class="palm-box"> <img class="palm" src="./images/palm_foto.png" alt="palm"></div>
-                <button type="button" class="button-main">choose your favorite</button>
-
-                <div class="strelitzia-box"><img class="strelitzia" src="./images/strelitzia.png" alt="strelitzia">
-                </div>
-               
-            </div>
-            <script src="/my_Projects/node_modules/swiper/swiper-bundle.min.js"></script>
-
-                <script src="./js/image-slider.js"></script>
-        </section> -->
-
-        <section class="section4">
-            <div class="feed-a-friend">
-                <h3>Pick and feed a friend</h3>
-                <p class="subtitle">We know the animals bring you joy, and in these extraordinary times, we’re glad.</p>
-                <p class="text text1">During a time when the COVID-19 epidemic is touching all of our lives, we’re proud
-                    and
-                    glad that people
-                    around the world find joy in PetStory.</p>
-                <p class="text">Even though the zoo has reopened, we need you now more than ever to help us deal with
-                    these
-                    problems.
-                    Please consider a gift to our <a href="#">Emergency Support Fund </a>. </p>
-
-                <p class="second-header">How it works</p>
-                <div class="scheme">
-                    <div class="item">
-                        <div class="item-image">
-                            <img class="im1" src="./images/scheme/pay.png" alt="">
-                        </div>
-                        <p>Pay with card</p>
-                    </div>
-                    <div class="arrow-bock">
-                        <img class="arrow" src="./images/scheme/Vector.png" alt="">
-                    </div>
-                    <div class="item">
-                        <div class="item-image">
-                            <img class="im2" src="./images/scheme/zoo.png" alt="">
-                        </div>
-                        <p>Payment goes to the zoo</p>
-                    </div>
-                    <div class="arrow-bock">
-                        <img class="arrow" src="./images/scheme/Vector.png" alt="">
-                    </div>
-                    <div class="item">
-                        <div class="item-image">
-                            <img class="im3" src="./images/scheme/monkey.png" alt="">
-                        </div>
-                        <p>Your favourite animal gets delicious dish</p>
-                    </div>
-                </div>
-                <button class="button-main">Feed a friend now</button>
-
-            </div>
-        </section>
-        <!-- <section class="section5">
+            </section>
+            <!-- <section class="section5">
         <h4>Testimonials</h4>
         <div class="reviews-slider swiper">
             <div class="reviews-slider__wrapper swiper-wrapper">
@@ -616,8 +536,8 @@
         <button class="button-main">leave feedback</button>
     </section> -->
 
-    </main>
-    <!-- <footer>
+        </main>
+        <footer><!--
     <div class="donate-block">
         <a href="./index.html" class="logo">PetStory <img class="decoration" src="./images/bamboo.png" alt="bambo">
             online</a>
@@ -657,41 +577,13 @@
             <a href="#">Designed by Bohdan Shcherbak</a>
             <a href="#">@rs</a>
         </div>
+    </div>-->
+        </footer>
+
+
+        <!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
+
     </div>
-</footer> -->
-
-    <div class="image-slider2 swiper">
-        <div class="image-slider2__wrapper swiper-wrapper">
-            <div class="image-slider2__slide swiper-slide" id="1">
-                <img src="./images/slides/Rectangle1.png" class="card-image" alt="image">
-            </div>
-            <div class="image-slider2__slide swiper-slide" id="1">
-                <img src="./images/slides/Rectangle2.png" class="card-image" alt="image">
-            </div>
-            <div class="image-slider2__slide swiper-slide" id="1">
-                <img src="./images/slides/Rectangle3.png" class="card-image" alt="image">
-            </div>
-            <div class="image-slider2__slide swiper-slide" id="1">
-                <img src="./images/slides/Rectangle4.png" class="card-image" alt="image">
-            </div>
-            <div class="image-slider2__slide swiper-slide" id="1">
-                <img src="./images/slides/Rectangle5.png" class="card-image" alt="image">
-            </div>
-            <div class="image-slider2__slide swiper-slide" id="1">
-                <img src="./images/slides/Rectangle3.png" class="card-image" alt="image">
-            </div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-scrollbar"></div>
-
-        <script src="/my_Projects/node_modules/swiper/swiper-bundle.min.js"></script>
-
-        <script src="./js/image-slider2.js"></script>
-    </div>
-    <!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
-
-
 </body>
 
 </html>
