@@ -1,7 +1,5 @@
 .The-Backstage {
     padding-top: 140px;
-    // position: relative;
-
     width: 100%;
 
     @media (max-width:1000px) {
@@ -57,15 +55,12 @@
                     width: 36.093%;
                     padding-top: 74.375%;
                     transform: translate(45%, -50%);
-
                 }
             }
 
             @media (max-width:400px) {
                 & {
                     background-image: url(../images/flower_foto400.png);
-
-                    // width: 8%;
                     width: 26.25%;
                     padding-top: 54.25%;
                     transform: translate(65%, -110%);
@@ -92,7 +87,6 @@
             }
 
             .The-Backstage__image {
-                border: 1px solid red;
                 align-items: center;
 
                 @media (max-width:900px) {
@@ -189,10 +183,6 @@
                     line-height: 1.3;
                     margin-top: 20px;
                     text-align: left;
-
-                    @media (max-width:900px) {
-                        & {}
-                    }
 
                     @media (max-width:640px) {
                         & {
@@ -363,7 +353,6 @@
         @media (max-width:400px) {
             & {
                 top: 33%;
-                // right: -45px;
             }
         }
 

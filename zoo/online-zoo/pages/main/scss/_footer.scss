@@ -1,109 +1,3 @@
-main {
-    flex: 1 1 auto;
-}
-
-
-
-
-
-.section5 {
-    width: 100%;
-    padding-bottom: 180px;
-
-
-    h4 {
-        margin-top: 140px;
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 36px;
-        line-height: 130%;
-        text-align: center;
-        color: #333B41;
-    }
-
-    .reviews-slider {
-        margin-top: 47px;
-        width: 72.5%;
-
-        .reviews-slider__wrapper {
-            .reviews-slider__slide {
-                background-color: #F1F3F2;
-                max-width: 268px;
-                height: 391px;
-                padding: 15px 15px 19px 16px;
-
-                .reviews-slider__card {
-                    .reviews-slider__profile-container {
-
-                        img {
-                            width: 37px;
-                            float: left;
-                            margin-right: 10px;
-
-                        }
-
-                        &:first-line {
-                            font-weight: 400;
-                            font-size: 16px;
-                            color: #000000;
-                        }
-
-                        p {
-                            font-family: 'Roboto';
-                            font-style: normal;
-                            font-weight: 300;
-                            font-size: 15px;
-                            line-height: 120%;
-                            color: #BDBDBD;
-                        }
-                    }
-
-                    .reviews-slider__text {
-                        font-family: 'Roboto';
-                        font-style: normal;
-                        font-weight: 300;
-                        font-size: 15px;
-                        line-height: 120%;
-                        text-align: left;
-                        color: #767474;
-                        margin-top: 10px;
-                    }
-                }
-            }
-        }
-
-        .swiper-scrollbar {
-            position: relative;
-            width: 51.7%;
-            margin-left: 24%;
-            margin-top: 21px;
-
-        }
-
-        .swiper-scrollbar-drag {
-            position: absolute;
-            cursor: pointer;
-            background: #FE9013;
-            border-radius: 5px;
-            max-width: 599px;
-
-
-        }
-    }
-
-    button {
-        margin-top: 31px;
-        margin-left: 13.75%;
-        border-radius: 5px;
-
-        &::before {
-            border-radius: 5px;
-
-        }
-    }
-}
-
 footer {
     display: flex;
     justify-content: center;
@@ -176,8 +70,6 @@ footer {
 
     .subscribe-block {
         h5 {
-            font-family: 'Roboto';
-            font-style: normal;
             font-weight: 400;
             font-size: 24px;
             line-height: 120%;
@@ -190,11 +82,9 @@ footer {
             input {
                 width: 228px;
                 height: 42px;
-                font-family: 'Roboto';
-                font-style: normal;
                 font-weight: 400;
-                font-size: 16px;
-                line-height: 140%;
+                font-size: 1rem;
+                line-height: 1.4;
                 color: #BDBDBD;
                 padding: 10px;
                 border-radius: 2px;
@@ -205,11 +95,9 @@ footer {
 
 
                 &::placeholder {
-                    font-family: 'Roboto';
-                    font-style: normal;
                     font-weight: 400;
-                    font-size: 16px;
-                    line-height: 140%;
+                    font-size: 1rem;
+                    line-height: 1.4;
                     color: #BDBDBD;
                     outline: none;
                 }
@@ -257,6 +145,11 @@ footer {
                     color: #4B9200;
                     border: 1px solid #4B9200;
                 }
+
+                &.active {
+                    margin-left: 300px;
+
+                }
             }
         }
 
@@ -271,8 +164,6 @@ footer {
             // }
 
             a {
-                font-family: 'Roboto';
-                font-style: normal;
                 font-weight: 100;
                 font-size: 16px;
                 line-height: 130%;

@@ -4,39 +4,26 @@
     padding-top: 80px;
     padding-bottom: 100px;
     background-image: url("../images/Giant_Panda.png");
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
     background-clip: border-box;
     object-fit: cover;
 
-    // &::before {
-    //     content: '';
-    //     position: absolute;
-    //     width: 100%;
-    //     height: 100%;
-    //     top: 0;
-    //     left: 0;
-    //     background-color: rgba(0, 0, 0, 0.2);
-    // }
-
-    @media (max-width:1000px) {
-        & {
-            background-image: url("../images/Giant_Panda1000.png");
-        }
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.1);
     }
 
     @media (max-width:640px) {
         & {
-            background-image: url("../images/Giant_Panda640.png");
             padding-top: 34px;
             padding-bottom: 40px;
-        }
-    }
-
-    @media (max-width:400px) {
-        & {
-            background-image: url("../images/Giant_Panda400.png");
         }
     }
 
