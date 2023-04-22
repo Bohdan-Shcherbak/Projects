@@ -1,7 +1,5 @@
 "use strict"
 let myTestimonialsSlider = new Swiper('.testimonials-slider', {
-    // autoHeight: true,
-    // slidesPerView: 4,
     initialSlide: 0,
     scrollbar: {
         el: '.swiper-scrollbar',
@@ -12,8 +10,6 @@ let myTestimonialsSlider = new Swiper('.testimonials-slider', {
 
     breakpoints: {
         0: {
-            // autoHeight: true,
-
             slidesPerView: 3,
             direction: 'vertical',
             spaceBetween: 15,
@@ -33,11 +29,6 @@ let myTestimonialsSlider = new Swiper('.testimonials-slider', {
 
 
         },
-        // 1300: {
-        //     slidesPerView: 4,
-        //     spaceBetween: 30,
-
-        // },
     },
 });
 

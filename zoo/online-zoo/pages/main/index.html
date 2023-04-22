@@ -14,7 +14,9 @@
     <!-- <link rel="stylesheet" href="/my_Projects/node_modules/swiper/swiper-bundle.min.css"> -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> -->
     <link rel="stylesheet" href="./js/swiper-bundle.min.css">
-
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
+    <link rel="stylesheet" href="./slick-1.8.1/slick/slick.css">
+    <!-- <link rel="stylesheet" href="./slick-1.8.1/slick/slick-theme.css"> -->
     <link rel="stylesheet" href="./css/main.css">
     <!-- <link rel="stylesheet" href="/my_Projects/node_modules/swiper/modules/grid/grid.js"> -->
     <!-- <link rel="stylesheet" href="/my_Projects/node_modules/swiper/modules/grid/grid.min.css"> -->
@@ -79,7 +81,6 @@
                                 <source srcset="./images/bamboo-cap1000.png" type="image/jpeg"
                                     media="(max-width:1000px)">
                                 <img src="./images/bamboo-cap.png" alt="bamboo">
-
                             </picture>
                         </div>
                         <div class="The-Backstage__text-block">
@@ -103,224 +104,358 @@
                                 and
                                 reptiles.</p>
                         </div>
-                        <!-- <div class="flower__container">
-                        <img class="flower-320" src="./images/flower_foto1.png" alt="flower">
-                    </div> -->
                     </div>
-                    <!-- <img class="flower" src="./images/flower_foto1.png" alt="flower"> -->
                 </div>
             </section>
-            <section class="section3">
-                <!-- <div class="button-prev">
+            <section class="image-slider">
+                <div class="button-prev">
                     <div class="button-prev-arrow">
                         <div class=""></div>
                     </div>
-                </div> -->
-                <div class="image-slider swiper">
+                </div>
+                <div class="image-slider__container swiper">
                     <div class="image-slider__wrapper swiper-wrapper">
                         <div class="image-slider__slide swiper-slide">
                             <div class="image-slider__card">
                                 <div class="card__image">
-                                    <img src="./images/slides/Rectangle1.png" alt="">
+                                    <img src="./images/slides/Rectangle0.png" alt="0">
                                 </div>
                                 <div class="card__text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
-                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
-                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
+                                    <p class="text__name">
+                                        giant Pandas
+                                    </p>
+                                    <p class="text__from">
+                                        Native to Southwest China
+                                    </p>
                                 </div>
                             </div>
                         </div>
                         <div class="image-slider__slide swiper-slide">
                             <div class="image-slider__card">
                                 <div class="card__image">
-                                    <img src="./images/slides/Rectangle1.png" alt="">
+                                    <img src="./images/slides/Rectangle1.png" alt="1">
                                 </div>
                                 <div class="card__text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
-                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
-                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
+                                    <p class="text__name">Eagles</p>
+                                    <p class="text__from">Native to South America</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-slider__slide swiper-slide">
+                            <div class="image-slider__card not-marg">
+                                <div class="card__image">
+                                    <img src="./images/slides/Rectangle2.png" alt="2">
+                                </div>
+                                <div class="card__text">
+                                    <p class="text__name">Gorillas</p>
+                                    <p class="text__from">Native to Congo</p>
                                 </div>
                             </div>
                         </div>
                         <div class="image-slider__slide swiper-slide">
                             <div class="image-slider__card">
                                 <div class="card__image">
-                                    <img src="./images/slides/Rectangle1.png" alt="">
+                                    <img src="./images/slides/Rectangle3.png" alt="3">
                                 </div>
                                 <div class="card__text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
-                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
-                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
+                                    <p class="text__name">Two-toed Sloth</p>
+                                    <p class="text__from">Mesoamerica, South America</p>
                                 </div>
                             </div>
                         </div>
                         <div class="image-slider__slide swiper-slide">
                             <div class="image-slider__card">
                                 <div class="card__image">
-                                    <img src="./images/slides/Rectangle1.png" alt="">
+                                    <img src="./images/slides/Rectangle4.png" alt="4">
                                 </div>
                                 <div class="card__text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
-                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
-                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
+                                    <p class="text__name">cheetahs</p>
+                                    <p class="text__from">Native to Africa</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-slider__slide swiper-slide">
+                            <div class="image-slider__card not-marg">
+                                <div class="card__image">
+                                    <img src="./images/slides/Rectangle5.png" alt="">
+                                </div>
+                                <div class="card__text">
+                                    <p class="text__name">Penguins</p>
+                                    <p class="text__from">Native to Antarctica</p>
                                 </div>
                             </div>
                         </div>
                         <div class="image-slider__slide swiper-slide">
                             <div class="image-slider__card">
                                 <div class="card__image">
-                                    <img src="./images/slides/Rectangle1.png" alt="">
+                                    <img src="./images/slides/Rectangle0.png" alt="0">
                                 </div>
                                 <div class="card__text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
-                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
-                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
+                                    <p class="text__name">
+                                        giant Pandas
+                                    </p>
+                                    <p class="text__from">
+                                        Native to Southwest China
+                                    </p>
                                 </div>
                             </div>
                         </div>
                         <div class="image-slider__slide swiper-slide">
                             <div class="image-slider__card">
                                 <div class="card__image">
-                                    <img src="./images/slides/Rectangle1.png" alt="">
+                                    <img src="./images/slides/Rectangle1.png" alt="1">
                                 </div>
                                 <div class="card__text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
-                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
-                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
+                                    <p class="text__name">Eagles</p>
+                                    <p class="text__from">Native to South America</p>
                                 </div>
                             </div>
                         </div>
                         <div class="image-slider__slide swiper-slide">
                             <div class="image-slider__card">
                                 <div class="card__image">
-                                    <img src="./images/slides/Rectangle1.png" alt="">
+                                    <img src="./images/slides/Rectangle2.png" alt="2">
                                 </div>
                                 <div class="card__text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
-                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
-                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
+                                    <p class="text__name">Gorillas</p>
+                                    <p class="text__from">Native to Congo</p>
                                 </div>
                             </div>
                         </div>
                         <div class="image-slider__slide swiper-slide">
                             <div class="image-slider__card">
                                 <div class="card__image">
-                                    <img src="./images/slides/Rectangle1.png" alt="">
+                                    <img src="./images/slides/Rectangle3.png" alt="3">
                                 </div>
                                 <div class="card__text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
-                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
-                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
+                                    <p class="text__name">Two-toed Sloth</p>
+                                    <p class="text__from">Mesoamerica, South America</p>
                                 </div>
                             </div>
                         </div>
                         <div class="image-slider__slide swiper-slide">
                             <div class="image-slider__card">
                                 <div class="card__image">
-                                    <img src="./images/slides/Rectangle1.png" alt="">
+                                    <img src="./images/slides/Rectangle4.png" alt="4">
                                 </div>
                                 <div class="card__text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
-                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
-                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
+                                    <p class="text__name">cheetahs</p>
+                                    <p class="text__from">Native to Africa</p>
                                 </div>
                             </div>
                         </div>
                         <div class="image-slider__slide swiper-slide">
                             <div class="image-slider__card">
                                 <div class="card__image">
-                                    <img src="./images/slides/Rectangle1.png" alt="">
+                                    <img src="./images/slides/Rectangle5.png" alt="">
                                 </div>
                                 <div class="card__text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
-                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
-                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-slider__slide swiper-slide">
-                            <div class="image-slider__card">
-                                <div class="card__image">
-                                    <img src="./images/slides/Rectangle1.png" alt="">
-                                </div>
-                                <div class="card__text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
-                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
-                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-slider__slide swiper-slide">
-                            <div class="image-slider__card">
-                                <div class="card__image">
-                                    <img src="./images/slides/Rectangle1.png" alt="">
-                                </div>
-                                <div class="card__text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
-                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
-                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-slider__slide swiper-slide">
-                            <div class="image-slider__card">
-                                <div class="card__image">
-                                    <img src="./images/slides/Rectangle1.png" alt="">
-                                </div>
-                                <div class="card__text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
-                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
-                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-slider__slide swiper-slide">
-                            <div class="image-slider__card">
-                                <div class="card__image">
-                                    <img src="./images/slides/Rectangle1.png" alt="">
-                                </div>
-                                <div class="card__text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
-                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
-                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-slider__slide swiper-slide">
-                            <div class="image-slider__card">
-                                <div class="card__image">
-                                    <img src="./images/slides/Rectangle1.png" alt="">
-                                </div>
-                                <div class="card__text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
-                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
-                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-slider__slide swiper-slide">
-                            <div class="image-slider__card">
-                                <div class="card__image">
-                                    <img src="./images/slides/Rectangle1.png" alt="">
-                                </div>
-                                <div class="card__text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia at voluptas
-                                    blanditiis deleniti cupiditate tenetur distinctio nihil quas saepe veritatis,
-                                    reprehenderit voluptatem, velit atque laborum illum quo repudiandae quibusdam!
+                                    <p class="text__name">Penguins</p>
+                                    <p class="text__from">Native to Antarctica</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+
                     <script src="./js/swiper-bundle.min.js"></script>
                     <script src="./js/image-slider.js"></script>
                 </div>
+                <div class="button-next">
+                    <div class="button-next-arrow">
+                        <div class=""></div>
+                    </div>
+                </div>
+                <button class="image-slider__button button-main">choose your favorite</button>
             </section>
-
-
-            <section class="section4">
+            <!-- <section class="image-slider">
+                <div class="image-slider__container">
+                    <div class="image-slider__slide">
+                        <div class="image-slider__card">
+                            <div class="card__image">
+                                <img src="./images/slides/Rectangle0.png" alt="0">
+                            </div>
+                            <div class="card__text">
+                                <p class="text__name">
+                                    giant Pandas
+                                </p>
+                                <p class="text__from">
+                                    Native to Southwest China
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-slider__slide">
+                        <div class="image-slider__card">
+                            <div class="card__image">
+                                <img src="./images/slides/Rectangle0.png" alt="0">
+                            </div>
+                            <div class="card__text">
+                                <p class="text__name">
+                                    giant Pandas
+                                </p>
+                                <p class="text__from">
+                                    Native to Southwest China
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-slider__slide">
+                        <div class="image-slider__card">
+                            <div class="card__image">
+                                <img src="./images/slides/Rectangle0.png" alt="0">
+                            </div>
+                            <div class="card__text">
+                                <p class="text__name">
+                                    giant Pandas
+                                </p>
+                                <p class="text__from">
+                                    Native to Southwest China
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-slider__slide">
+                        <div class="image-slider__card">
+                            <div class="card__image">
+                                <img src="./images/slides/Rectangle0.png" alt="0">
+                            </div>
+                            <div class="card__text">
+                                <p class="text__name">
+                                    giant Pandas
+                                </p>
+                                <p class="text__from">
+                                    Native to Southwest China
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-slider__slide">
+                        <div class="image-slider__card">
+                            <div class="card__image">
+                                <img src="./images/slides/Rectangle0.png" alt="0">
+                            </div>
+                            <div class="card__text">
+                                <p class="text__name">
+                                    giant Pandas
+                                </p>
+                                <p class="text__from">
+                                    Native to Southwest China
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-slider__slide">
+                        <div class="image-slider__card">
+                            <div class="card__image">
+                                <img src="./images/slides/Rectangle0.png" alt="0">
+                            </div>
+                            <div class="card__text">
+                                <p class="text__name">
+                                    giant Pandas
+                                </p>
+                                <p class="text__from">
+                                    Native to Southwest China
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-slider__slide">
+                        <div class="image-slider__card">
+                            <div class="card__image">
+                                <img src="./images/slides/Rectangle0.png" alt="0">
+                            </div>
+                            <div class="card__text">
+                                <p class="text__name">
+                                    giant Pandas
+                                </p>
+                                <p class="text__from">
+                                    Native to Southwest China
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-slider__slide">
+                        <div class="image-slider__card">
+                            <div class="card__image">
+                                <img src="./images/slides/Rectangle0.png" alt="0">
+                            </div>
+                            <div class="card__text">
+                                <p class="text__name">
+                                    giant Pandas
+                                </p>
+                                <p class="text__from">
+                                    Native to Southwest China
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-slider__slide">
+                        <div class="image-slider__card">
+                            <div class="card__image">
+                                <img src="./images/slides/Rectangle0.png" alt="0">
+                            </div>
+                            <div class="card__text">
+                                <p class="text__name">
+                                    giant Pandas
+                                </p>
+                                <p class="text__from">
+                                    Native to Southwest China
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-slider__slide">
+                        <div class="image-slider__card">
+                            <div class="card__image">
+                                <img src="./images/slides/Rectangle0.png" alt="0">
+                            </div>
+                            <div class="card__text">
+                                <p class="text__name">
+                                    giant Pandas
+                                </p>
+                                <p class="text__from">
+                                    Native to Southwest China
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-slider__slide">
+                        <div class="image-slider__card">
+                            <div class="card__image">
+                                <img src="./images/slides/Rectangle0.png" alt="0">
+                            </div>
+                            <div class="card__text">
+                                <p class="text__name">
+                                    giant Pandas
+                                </p>
+                                <p class="text__from">
+                                    Native to Southwest China
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-slider__slide">
+                        <div class="image-slider__card">
+                            <div class="card__image">
+                                <img src="./images/slides/Rectangle0.png" alt="0">
+                            </div>
+                            <div class="card__text">
+                                <p class="text__name">
+                                    giant Pandas
+                                </p>
+                                <p class="text__from">
+                                    Native to Southwest China
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+                <script src="./js/slick.min.js"></script>
+                <script src="./js/slick-slider.js"></script>
+            </section> -->
+            <section class="feed-a-friend">
                 <div class="feed-a-friend__container">
                     <h3 class="feed-a-friend__title">Pick and feed a friend</h3>
                     <p class="feed-a-friend__subtitle">We know the animals bring you joy, and in these extraordinary
