@@ -108,7 +108,7 @@ body._lock {
   background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
 }
 
-footer .footer__container .footer__menu .menu__list .menu__item .active, footer .footer__container .footer__menu .menu__list .menu__item .menu__link:active, .image-slider .button-next, .image-slider .button-prev, header .header__container .header__left .header__menu .menu__list .active, header .header__container .header__left .header__menu .menu__list .menu__link:active {
+footer .footer__container .footer__social .footer__menu .menu__list .menu__item .active, footer .footer__container .footer__social .footer__menu .menu__list .menu__item .menu__link:active, .image-slider .button-next, .image-slider .button-prev, header .header__container .header__left .header__menu .menu__list .active, header .header__container .header__left .header__menu .menu__list .menu__link:active {
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -579,7 +579,7 @@ header .header__container .header__designed .burger__icon {
 .The-Backstage .The-Backstage__container::before {
   content: "";
   position: absolute;
-  background-image: url(../images/flower_foto1.png);
+  background-image: url(../images/flower_foto.png);
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -988,6 +988,81 @@ header .header__container .header__designed .burger__icon {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   z-index: 3;
+}
+.image-slider::before {
+  content: "";
+  position: absolute;
+  background-image: url(../images/palm_foto.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  left: 0;
+  width: 55%;
+  padding-top: 29%;
+  bottom: 0;
+  -webkit-transform: translate(-65%, 1%);
+          transform: translate(-65%, 1%);
+}
+@media (max-width: 1500px) {
+  .image-slider::before {
+    -webkit-transform: translate(-65%, 37%);
+            transform: translate(-65%, 37%);
+    width: 35%;
+  }
+}
+@media (max-width: 1000px) {
+  .image-slider::before {
+    padding-top: 21%;
+    -webkit-transform: translate(-50%, 1%);
+            transform: translate(-50%, 1%);
+    width: 40%;
+  }
+}
+@media (max-width: 640px) {
+  .image-slider::before {
+    padding-top: 33%;
+    -webkit-transform: translate(-60%, 0%);
+            transform: translate(-60%, 0%);
+    width: 63%;
+  }
+}
+@media (max-width: 440px) {
+  .image-slider::before {
+    padding-top: 17%;
+    -webkit-transform: translate(-60%, 0%);
+            transform: translate(-60%, 0%);
+    width: 32.8%;
+  }
+}
+.image-slider::after {
+  content: "";
+  position: absolute;
+  background-image: url(../images/strelitzia.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  right: 0;
+  width: 23%;
+  padding-top: 17.1%;
+  bottom: 0;
+}
+@media (max-width: 1000px) {
+  .image-slider::after {
+    width: 24.6%;
+    padding-top: 18.4%;
+  }
+}
+@media (max-width: 640px) {
+  .image-slider::after {
+    padding-top: 21%;
+    width: 28.1%;
+  }
+}
+@media (max-width: 440px) {
+  .image-slider::after {
+    padding-top: 16.8%;
+    width: 20.1%;
+  }
 }
 .image-slider .image-slider__container {
   height: 872px;
@@ -1677,9 +1752,14 @@ footer {
   height: 443px;
 }
 footer .footer__container {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1687,7 +1767,31 @@ footer .footer__container {
   padding-bottom: 50px;
   height: 100%;
 }
+@media (max-width: 1000px) {
+  footer .footer__container {
+    padding: 40px 31px 50px 30px;
+  }
+}
+@media (max-width: 640px) {
+  footer .footer__container {
+    padding: 12px 20px;
+  }
+}
+@media (max-width: 400px) {
+  footer .footer__container {
+    padding: 20px 9px;
+  }
+}
 footer .footer__container .footer__donate-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+footer .footer__container .footer__donate-block .donate-block__donate {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1699,13 +1803,135 @@ footer .footer__container .footer__donate-block {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-footer .footer__container .footer__donate-block button {
+@media (max-width: 400px) {
+  footer .footer__container .footer__donate-block .donate-block__donate {
+    margin: 0 auto;
+  }
+  footer .footer__container .footer__donate-block .donate-block__donate div {
+    margin: 0 auto;
+  }
+}
+footer .footer__container .footer__donate-block .donate-block__donate button {
+  border-radius: 5px;
+  margin-top: 68px;
+}
+footer .footer__container .footer__donate-block .donate-block__donate button::before {
   border-radius: 5px;
 }
-footer .footer__container .footer__donate-block button::before {
+@media (max-width: 800px) {
+  footer .footer__container .footer__donate-block .subscribe__form {
+    display: none;
+  }
+}
+footer .footer__container .footer__donate-block .subscribe__form h5 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: #FFFFFF;
+}
+footer .footer__container .footer__donate-block .subscribe__form form {
+  margin-top: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+footer .footer__container .footer__donate-block .subscribe__form form input {
+  width: 228px;
+  height: 42px;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #BDBDBD;
+  padding: 10px;
+  border: 0.7px solid #FA6F32;
+  background-color: #000;
+  outline: none;
+}
+footer .footer__container .footer__donate-block .subscribe__form form input::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #BDBDBD;
+  outline: none;
+}
+footer .footer__container .footer__donate-block .subscribe__form form input::-moz-placeholder {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #BDBDBD;
+  outline: none;
+}
+footer .footer__container .footer__donate-block .subscribe__form form input:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #BDBDBD;
+  outline: none;
+}
+footer .footer__container .footer__donate-block .subscribe__form form input::-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #BDBDBD;
+  outline: none;
+}
+footer .footer__container .footer__donate-block .subscribe__form form input::placeholder {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #BDBDBD;
+  outline: none;
+}
+footer .footer__container .footer__donate-block .subscribe__form form input:invalid {
+  border: 1px solid #D31414;
+  color: #D31414;
+}
+footer .footer__container .footer__donate-block .subscribe__form form input:active {
+  border: 1px solid #4B9200;
+}
+footer .footer__container .footer__donate-block .subscribe__form form button {
+  margin-left: 8px;
+  width: 129px;
+  height: 42px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  color: #333B41;
+  border: 1 px solid #333B41;
   border-radius: 5px;
 }
-footer .footer__container .footer__donate-block .footer__social {
+footer .footer__container .footer__donate-block .subscribe__form form button:invalid {
+  border: 1px solid #D31414;
+  color: #D31414;
+}
+footer .footer__container .footer__donate-block .subscribe__form form button:active {
+  border: 1px solid #4B9200;
+}
+footer .footer__container .footer__donate-block .subscribe__form form button:focus {
+  color: #4B9200;
+  border: 1px solid #4B9200;
+}
+footer .footer__container .footer__social {
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 640px) {
+  footer .footer__container .footer__social {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 48%;
+            flex: 0 1 48%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+footer .footer__container .footer__social .footer__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1715,7 +1941,24 @@ footer .footer__container .footer__donate-block .footer__social {
           flex-direction: column;
   gap: 10px;
 }
-footer .footer__container .footer__donate-block .footer__social .social__item .social__link {
+@media (max-width: 800px) {
+  footer .footer__container .footer__social .footer__list {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+  }
+}
+@media (max-width: 400px) {
+  footer .footer__container .footer__social .footer__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    top: 105px;
+    right: 32%;
+  }
+}
+footer .footer__container .footer__social .footer__list .social__item .social__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1723,13 +1966,13 @@ footer .footer__container .footer__donate-block .footer__social .social__item .s
       -ms-flex-align: center;
           align-items: center;
 }
-footer .footer__container .footer__donate-block .footer__social .social__item .social__link:active div {
+footer .footer__container .footer__social .footer__list .social__item .social__link:active div {
   background-color: #4B9200;
 }
-footer .footer__container .footer__donate-block .footer__social .social__item .social__link:active span {
+footer .footer__container .footer__social .footer__list .social__item .social__link:active span {
   color: #4B9200;
 }
-footer .footer__container .footer__donate-block .footer__social .social__item .social__link div {
+footer .footer__container .footer__social .footer__list .social__item .social__link div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1744,14 +1987,19 @@ footer .footer__container .footer__donate-block .footer__social .social__item .s
   background-color: rgba(196, 196, 196, 0.5);
   border-radius: 50px;
 }
-footer .footer__container .footer__donate-block .footer__social .social__item .social__link div svg {
+footer .footer__container .footer__social .footer__list .social__item .social__link div svg {
   fill: #fff;
 }
-footer .footer__container .footer__donate-block .footer__social .social__item .social__link span {
+footer .footer__container .footer__social .footer__list .social__item .social__link span {
   margin-left: 12px;
   color: #fff;
 }
-footer .footer__container .footer__menu {
+@media (max-width: 800px) {
+  footer .footer__container .footer__social .footer__list .social__item .social__link span {
+    display: none;
+  }
+}
+footer .footer__container .footer__social .footer__menu {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1766,7 +2014,7 @@ footer .footer__container .footer__menu {
       -ms-flex-pack: center;
           justify-content: center;
 }
-footer .footer__container .footer__menu .menu__list {
+footer .footer__container .footer__social .footer__menu .menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1775,115 +2023,20 @@ footer .footer__container .footer__menu .menu__list {
           justify-content: center;
   gap: 58px;
 }
-footer .footer__container .footer__menu .menu__list .menu__item .menu__link {
+@media (max-width: 640px) {
+  footer .footer__container .footer__social .footer__menu .menu__list {
+    gap: 30px;
+  }
+}
+footer .footer__container .footer__social .footer__menu .menu__list .menu__item .menu__link {
   font-size: 1rem;
   line-height: 1.4;
   color: #fff;
 }
-footer .footer__container .footer__menu .menu__list .menu__item .menu__link:hover {
+footer .footer__container .footer__social .footer__menu .menu__list .menu__item .menu__link:hover {
   color: yellow;
 }
-footer .footer__container .footer__subscribe {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-footer .footer__container .footer__subscribe .subscribe__form h5 {
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 1.2;
-  color: #FFFFFF;
-}
-footer .footer__container .footer__subscribe .subscribe__form form {
-  margin-top: 14px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-footer .footer__container .footer__subscribe .subscribe__form form input {
-  width: 228px;
-  height: 42px;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.4;
-  color: #BDBDBD;
-  padding: 10px;
-  border: 0.7px solid #FA6F32;
-  background-color: #000;
-  outline: none;
-}
-footer .footer__container .footer__subscribe .subscribe__form form input::-webkit-input-placeholder {
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.4;
-  color: #BDBDBD;
-  outline: none;
-}
-footer .footer__container .footer__subscribe .subscribe__form form input::-moz-placeholder {
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.4;
-  color: #BDBDBD;
-  outline: none;
-}
-footer .footer__container .footer__subscribe .subscribe__form form input:-ms-input-placeholder {
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.4;
-  color: #BDBDBD;
-  outline: none;
-}
-footer .footer__container .footer__subscribe .subscribe__form form input::-ms-input-placeholder {
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.4;
-  color: #BDBDBD;
-  outline: none;
-}
-footer .footer__container .footer__subscribe .subscribe__form form input::placeholder {
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.4;
-  color: #BDBDBD;
-  outline: none;
-}
-footer .footer__container .footer__subscribe .subscribe__form form input:invalid {
-  border: 1px solid #D31414;
-  color: #D31414;
-}
-footer .footer__container .footer__subscribe .subscribe__form form input:active {
-  border: 1px solid #4B9200;
-}
-footer .footer__container .footer__subscribe .subscribe__form form button {
-  margin-left: 8px;
-  width: 129px;
-  height: 42px;
-  border-radius: 5px;
-  cursor: pointer;
-  outline: none;
-  color: #333B41;
-  border: 1 px solid #333B41;
-  border-radius: 5px;
-}
-footer .footer__container .footer__subscribe .subscribe__form form button:invalid {
-  border: 1px solid #D31414;
-  color: #D31414;
-}
-footer .footer__container .footer__subscribe .subscribe__form form button:active {
-  border: 1px solid #4B9200;
-}
-footer .footer__container .footer__subscribe .subscribe__form form button:focus {
-  color: #4B9200;
-  border: 1px solid #4B9200;
-}
-footer .footer__container .footer__subscribe .subscribe__contacts {
+footer .footer__container .footer__social .subscribe__contacts {
   text-align: right;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1893,14 +2046,21 @@ footer .footer__container .footer__subscribe .subscribe__contacts {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 10px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
-footer .footer__container .footer__subscribe .subscribe__contacts a {
+@media (max-width: 640px) {
+  footer .footer__container .footer__social .subscribe__contacts {
+    margin-top: 20px;
+  }
+}
+footer .footer__container .footer__social .subscribe__contacts a {
   font-weight: 100;
   font-size: 1rem;
   line-height: 1.3;
   color: #fff;
   opacity: 0.5;
 }
-footer .footer__container .footer__subscribe .subscribe__contacts a:active {
+footer .footer__container .footer__social .subscribe__contacts a:active {
   color: #4B9200;
 }

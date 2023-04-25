@@ -126,6 +126,84 @@
         }
     }
 
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url(../images/palm_foto.png);
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        left: 0;
+        width: 55%;
+        padding-top: 29%;
+        bottom: 0;
+        transform: translate(-65%, 1%);
+
+        @media (max-width:1500px) {
+            & {
+                transform: translate(-65%, 37%);
+                width: 35%;
+            }
+        }
+
+        @media (max-width:1000px) {
+            & {
+                padding-top: 21%;
+                transform: translate(-50%, 1%);
+                width: 40%;
+            }
+        }
+
+        @media (max-width:640px) {
+            & {
+                padding-top: 33%;
+                transform: translate(-60%, 0%);
+                width: 63%;
+            }
+        }
+
+        @media (max-width:440px) {
+            & {
+                padding-top: 17%;
+                transform: translate(-60%, 0%);
+                width: 32.8%;
+            }
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        background-image: url(../images/strelitzia.png);
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        right: 0;
+        width: 23%;
+        padding-top: 17.1%;
+        bottom: 0;
+
+        @media (max-width:1000px) {
+            & {
+                width: 24.6%;
+                padding-top: 18.4%;
+            }
+        }
+
+        @media (max-width:640px) {
+            & {
+                padding-top: 21%;
+                width: 28.1%;
+            }
+        }
+
+        @media (max-width:440px) {
+            & {
+                padding-top: 16.8%;
+                width: 20.1%;
+            }
+        }
+    }
 
     .image-slider__container {
         height: 872px;
@@ -159,6 +237,8 @@
                 height: 1388px;
             }
         }
+
+
 
         .image-slider__wrapper {
             display: flex;

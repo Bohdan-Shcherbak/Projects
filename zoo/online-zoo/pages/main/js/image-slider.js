@@ -8,15 +8,16 @@ const myImageSlider = new Swiper('.image-slider__container', {
     },
     autoHeight: false,
     loop: false,
+    slidesPerGroup: 6,
 
     breakpoints: {
         0: {
             slidesPerView: 4,
             autoHeight: false,
             spaceBetween: 20,
-            simulateTouch: true,
-            touchRatio: 1,
-            touchAngle: 45,
+            simulateTouch: false,
+            // touchRatio: 1,
+            // touchAngle: 45,
             grabCursor: true,
             direction: 'vertical',
         },
@@ -29,7 +30,7 @@ const myImageSlider = new Swiper('.image-slider__container', {
             slidesPerView: 2,
             slidesPerColumn: 2,
             spaceBetween: 30,
-            simulateTouch: false,
+            // simulateTouch: false,
         },
 
         641: {
@@ -40,6 +41,8 @@ const myImageSlider = new Swiper('.image-slider__container', {
             slidesPerView: 3,
             slidesPerColumn: 2,
             spaceBetween: 30,
+            // simulateTouch: false,
+
         },
     }
 })
