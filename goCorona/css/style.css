@@ -1,3 +1,42 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     font-family: Rubik;
     font-size: 12px;
@@ -75,7 +114,6 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    border: 1px solid red;
 }
 
 .menu {
@@ -448,18 +486,15 @@ body {
 .stay-safe__container {
     display: flex;
     align-items: center;
-    outline: 1px solid red
 }
 
 .stay-safe__media {
     flex: 0 1 50%;
     padding: 0px 0px 0px 47px;
-    outline: 1px solid green
 }
 
 .stay-safe__content {
     flex: 0 1 50%;
-    outline: 1px solid green
 }
 
 .media-stay-safe {
@@ -847,8 +882,9 @@ body {
 
 .footer__items {
     display: flex;
-    column-gap: 50px;
-    row-gap: 20px;
+    /* column-gap: 50px;
+    row-gap: 20px; */
+    gap: 50px;
     justify-content: center;
     align-items: center;
 }
