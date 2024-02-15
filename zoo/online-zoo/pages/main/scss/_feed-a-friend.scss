@@ -1,10 +1,8 @@
-@import url(./_colors.scss);
-
 .feed-a-friend {
     @extend %pink;
     padding: 69px 0 100px 0;
 
-    @media (max-width:1000px) {
+    @media (max-width:1024px) {
         & {
             padding: 30px 30px 50px 30px;
         }
@@ -30,7 +28,7 @@
         border-radius: 20px;
         color: #333B41;
 
-        @media (max-width:1000px) {
+        @media (max-width:1024px) {
             & {
                 padding: 30px 48px 50px 49px;
             }
@@ -50,7 +48,6 @@
 
         .feed-a-friend__title {
             text-align: center;
-            font-weight: 400;
             font-size: 3rem;
             line-height: 1.2;
             color: #FE9013;
@@ -101,7 +98,6 @@
         }
 
         .feed-a-friend__text {
-            font-weight: 400;
             font-size: 1rem;
             line-height: 1.3;
             margin-top: 10px;

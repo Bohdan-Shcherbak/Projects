@@ -88,12 +88,12 @@ header {
                             align-items: flex-start;
                             justify-content: flex-start;
                             margin-top: -200%;
-                            transition: all ease 2s;
+                            transition: all ease 1s;
                             height: calc(100% - 64px);
 
                             &._active {
                                 margin-top: 30px;
-                                transition: all ease 2s;
+                                transition: all ease 1s;
                                 overflow: auto;
 
                             }
@@ -141,7 +141,7 @@ header {
                         }
 
                         &:hover {
-                            color: yellow;
+                            @extend %yellow;
                         }
 
                         &:active {
@@ -162,14 +162,13 @@ header {
 
             .designed__link {
                 z-index: 10;
-                font-style: normal;
                 font-weight: 500;
                 font-size: 1rem;
                 line-height: 1.4;
                 color: #fff;
 
                 &:hover {
-                    color: yellow;
+                    @extend %yellow;
                 }
 
                 &:active {

@@ -1,3 +1,6 @@
+// @import './colors.scss';
+
+
 *,
 *::before,
 *::after {
@@ -33,18 +36,17 @@ h6 {
 }
 
 body {
-  // overflow-x: hidden;
+  color: #333B41;
   font-style: normal;
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
   position: relative;
-}
+  overflow: auto;
 
-
-
-body._lock {
-  overflow: hidden;
+  &._lock {
+    overflow: hidden;
+  }
 }
 
 .wrapper {
@@ -69,7 +71,7 @@ body._lock {
   position: relative;
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
   color: #fff;
-  font-family: 'Roboto';
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;

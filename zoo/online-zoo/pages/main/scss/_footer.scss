@@ -67,7 +67,6 @@ footer {
                 }
 
                 h5 {
-                    font-weight: 400;
                     font-size: 1.5rem;
                     line-height: 1.2;
                     color: #FFFFFF;
@@ -80,7 +79,6 @@ footer {
                     input {
                         width: 228px;
                         height: 42px;
-                        font-weight: 400;
                         font-size: 1rem;
                         line-height: 1.4;
                         color: #BDBDBD;
@@ -90,7 +88,6 @@ footer {
                         outline: none;
 
                         &::placeholder {
-                            font-weight: 400;
                             font-size: 1rem;
                             line-height: 1.4;
                             color: #BDBDBD;
@@ -201,6 +198,10 @@ footer {
                             margin-left: 12px;
                             color: #fff;
 
+                            &:hover {
+                                text-decoration: underline solid;
+                            }
+
                             @media (max-width:800px) {
                                 & {
                                     display: none;
@@ -236,7 +237,7 @@ footer {
                             color: #fff;
 
                             &:hover {
-                                color: yellow;
+                                @extend %yellow;
                             }
 
                             &:active {

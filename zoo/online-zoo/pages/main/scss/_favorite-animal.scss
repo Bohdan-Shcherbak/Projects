@@ -72,7 +72,7 @@
 
                 @media (max-width:800px) {
                     & {
-                        width: 300px;
+                        width: 320px;
 
                     }
                 }
@@ -115,11 +115,12 @@
 
                     span {
                         margin-left: -30px;
-                        color: #FFEE2E;
+                        @extend %yellow;
                     }
 
-                    @media (max-width:767px) {
+                    @media (max-width:768px) {
                         & {
+                            top: 64px;
                             font-size: calc(28px + (78.5 + 78.5* 0.7) * ((100vw - 320px) / 1600));
                         }
                     }

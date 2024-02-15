@@ -23,11 +23,8 @@ let myTestimonialsSlider = new Swiper('.testimonials-slider', {
         },
         1001: {
             direction: 'horizontal',
-
             slidesPerView: 4,
             spaceBetween: 30,
-
-
         },
     },
 });
