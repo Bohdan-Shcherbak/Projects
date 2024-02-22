@@ -11,6 +11,7 @@ const activation = () => {
     setTimeout(() => navigation.classList.toggle('_active'), 300);
     setTimeout(() => headerIcon.classList.toggle('_active'), 500);
     setTimeout(() => bodyLock.classList.toggle('_lock'), 500);
-
 }
 headerIcon.addEventListener("click", activation);
+
+

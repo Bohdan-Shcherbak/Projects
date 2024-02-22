@@ -33,7 +33,6 @@ h6 {
 }
 
 body {
-  color: #333B41;
   font-style: normal;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -52,12 +51,20 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+
 }
 
 [class*="__container"] {
   max-width: 1200px;
   margin: 0px auto;
   padding: 0px 20px;
+
+  @media (max-width:320px) {
+    & {
+      padding: 0px 10px;
+    }
+  }
 }
 
 .button-main {
@@ -68,8 +75,8 @@ body {
   position: relative;
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
   color: #fff;
-  font-family: "Roboto", sans-serif;
   font-style: normal;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 140%;
