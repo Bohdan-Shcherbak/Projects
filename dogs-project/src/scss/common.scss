@@ -43,3 +43,25 @@
 
     &__button {}
 }
+
+.up {
+    transform: rotate(-90deg);
+    font-size: rem(20);
+    position: fixed;
+    bottom: rem(30);
+    right: rem(10);
+    transition: all 0.8s;
+    opacity: 1;
+    visibility: visible;
+    color: $bgGold;
+    z-index: 50;
+
+    ._watcher-view & {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    @media (max-width:$mobile) {
+        display: none;
+    }
+}
