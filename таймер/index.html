@@ -12,73 +12,64 @@
 </head>
 
 <body>
-    <!-- <div class="container">
-        <div class="one_number"></div>
-        <div class="two_number"></div>
-    </div> -->
-    <!-- <div class="form">
-        <label id="pole1" aria-label="rrrrrr">xsfh</label>
-        <input id="GETname" type="text" name="name" />
-        <input type="submit" value="Save" />
-    </div> -->
-    <!-- <div class="start">
-        <button>Start</button>
-    </div> -->
-    <!-- <div class="timer">
-        <div class="timer__items">
-            <div class="timer__item timer__days">00</div>
-            <div class="timer__item timer__hours">00</div>
-            <div class="timer__item timer__minutes">00</div>
-            <div class="timer__item timer__seconds">00</div>
-        </div>
-    </div> -->
     <div class="container">
-        <img class="main__img" src="./обои_карибы.jpg" alt="img">
-        <div class="timer">
-            <div class="windowNum">
-                <div class="windowNum__block">
-                    <input type="number" class="initialNUm initial__hours initialNUm_1" value="1">
-                    <p class="windowNum__title">Годин</p>
+        <div class="timer__container windowNone">
+            <div class="timer__item">
+                <div class="hours-animation block-animation">
+                    <div class="timer__insert timer__hours">88</div>
                 </div>
-                <div class="windowNum__block">
-                    <input type="number" class="initialNUm initial__minutes initialNUm_2" value="22">
-                    <p class="windowNum__title">Хвилин</p>
-                </div>
-                <div class="windowNum__block">
-                    <input type="number" class="initialNUm initial__seconds initialNUm_3" value="33">
-                    <p class="windowNum__title">Секунд</p>
-                </div>
-
+                <p class="timer__title">Годин</p>
             </div>
+            <div class="timer__item">
+                <div class="minutes-animation block-animation">
+                    <div class="timer__insert timer__minutes">88</div>
+                </div>
+                <p class="timer__title">Хвилин</p>
+            </div>
+            <div class="timer__item">
+                <div class="seconds-animation block-animation">
+                    <div class="timer__insert timer__seconds">88</div>
+                </div>
+                <p class="timer__title">Секунд</p>
+            </div>
+        </div>
+        <div class="windowNum">
+            <div class="windowNum__block hours">
+                <input id="hours" size="2" type="number" class="initialNUm initial__hours initialNUm_1" value="10"
+                    min="0" max="72">
+                <p class="windowNum__title">Годин</p>
+                <a href="#"><i class="left"></i></a>
+                <a href="#"><i class="right"></i></a>
+            </div>
+            <div class="windowNum__block minutes">
+                <input id="minutes" size="2" type="number" class="initialNUm initial__minutes initialNUm_2" min="0"
+                    max="60" value="22">
+                <p class="windowNum__title text-minutes">Хвилин</p>
+                <a href="#"><i class="left"></i></a>
+                <a href="#"><i class="right"></i></a>
+            </div>
+            <div class="windowNum__block seconds ">
+                <input id="seconds" size="2" type="number" class="initialNUm initial__seconds initialNUm_3" required
+                    min="0" max="60" value="33">
+                <p class="windowNum__title text-seconds">Секунд</p>
+                <a href="#"><i class="left"></i></a>
+                <a href='#'><i class="right"></i></a>
+            </div>
+        </div>
 
-            <button class="reset">
-                <!-- <svg width="50" height="50">
-                    <use href="./arrow-rotate-right-solid.svg"></use>
-                </svg> -->
-                <svg xmlns="http://www.w3.org/2000/svg" height="50px"
-                    viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+        <div class="buttons">
+            <a href="#" class="reset"> <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 0 512 512">
                     <path
                         d="M386.3 160H336c-17.7 0-32 14.3-32 32s14.3 32 32 32H464c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32s-32 14.3-32 32v51.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0s-87.5 229.3 0 316.8s229.3 87.5 316.8 0c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0c-62.5 62.5-163.8 62.5-226.3 0s-62.5-163.8 0-226.3s163.8-62.5 226.3 0L386.3 160z" />
-                </svg>
-            </button>
-
-
-            <div class="timer__items">
-                <div class="timer__item timer__hours timer__hours_none">88</div>
-                <div class="timer__item timer__minutes">88</div>
-                <div class="timer__item timer__seconds">88</div>
-
-            </div>
-
-        </div>
-        <div class="buttons">
+                </svg></a>
             <button class="butt__start">Start</button>
             <button class="butt__stop">Stop</button>
-
         </div>
-
-        <script src="./code.js"></script>
     </div>
+
+    </div>
+
+    <script src="./code.js"></script>
 
 </body>
 
