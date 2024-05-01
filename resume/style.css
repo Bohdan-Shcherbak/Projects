@@ -383,7 +383,39 @@ h4 {
     margin-top: 15px;
 }
 
+.links__list {
+    margin-top: 10px;
+}
+
+.links__item {
+    position: relative;
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.links__item a {
+    color: #000;
+}
+
+.links__item a:hover {
+    text-decoration: underline;
+}
+
+.links__item::before {
+    position: absolute;
+    content: '\2713';
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    color: blue;
+}
+
 .aboutMe__container {
     margin-top: 10px;
+}
 
+.aboutMe__container p {
+    margin-top: 10px;
 }
