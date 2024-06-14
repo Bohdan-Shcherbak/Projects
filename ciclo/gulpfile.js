@@ -27,14 +27,17 @@ import { ftp } from "./config/gulp-tasks/ftp.js";
 import { zip } from "./config/gulp-tasks/zip.js";
 import { sprite } from "./config/gulp-tasks/sprite.js";
 import { gitignore } from "./config/gulp-tasks/gitignore.js";
-import { otfToTtf, ttfToWoff, fonstStyle } from "./config/gulp-tasks/fonts.js";
+// import { otfToTtf, ttfToWoff, fonstStyle } from "./config/gulp-tasks/fonts.js";
 
 // Послідовна обробка шрифтів
-const fonts = gulp.series(reset, otfToTtf, ttfToWoff, fonstStyle);
+// const fonts = gulp.series(reset, otfToTtf, ttfToWoff, fonstStyle);
+const fonts = gulp.series(reset);
 // Основні завдання виконуватимемо паралельно після обробки шрифтів
-const devTasks = gulp.parallel(fonts, gitignore);
+// const devTasks = gulp.parallel(fonts, gitignore);
+const devTasks = gulp.parallel(gitignore);
 // Основні завдання виконуватимемо паралельно після обробки шрифтів
-const buildTasks = gulp.series(fonts, jsDev, js, gulp.parallel(html, css, images, gitignore));
+// const buildTasks = gulp.series(fonts, jsDev, js, gulp.parallel(html, css, images, gitignore));
+const buildTasks = gulp.series(jsDev, js, gulp.parallel(html, css, images, gitignore));
 
 // Експорт завдань
 export { html }
