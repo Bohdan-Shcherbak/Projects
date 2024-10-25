@@ -16,6 +16,8 @@ global.app = {
 	plugins: plugins
 }
 
+
+
 // Імпорт завдань
 import { reset } from "./config/gulp-tasks/reset.js";
 import { html } from "./config/gulp-tasks/html.js";
@@ -27,14 +29,15 @@ import { ftp } from "./config/gulp-tasks/ftp.js";
 import { zip } from "./config/gulp-tasks/zip.js";
 import { sprite } from "./config/gulp-tasks/sprite.js";
 import { gitignore } from "./config/gulp-tasks/gitignore.js";
-import { otfToTtf, ttfToWoff, fonstStyle } from "./config/gulp-tasks/fonts.js";
+// import { otfToTtf, ttfToWoff, fonstStyle } from "./config/gulp-tasks/fonts.js";
+
 
 // Послідовна обробка шрифтів
-const fonts = gulp.series(reset, otfToTtf, ttfToWoff, fonstStyle);
+// const fonts = gulp.series(otfToTtf, ttfToWoff, fonstStyle);
 // Основні завдання виконуватимемо паралельно після обробки шрифтів
-const devTasks = gulp.parallel(fonts, gitignore);
+const devTasks = gulp.parallel(gitignore);
 // Основні завдання виконуватимемо паралельно після обробки шрифтів
-const buildTasks = gulp.series(fonts, jsDev, js, gulp.parallel(html, css, images, gitignore));
+const buildTasks = gulp.series(jsDev, js, gulp.parallel(html, css, images, gitignore));
 
 // Експорт завдань
 export { html }
@@ -42,7 +45,7 @@ export { css }
 export { js }
 export { jsDev }
 export { images }
-export { fonts }
+// export { fonts }
 export { sprite }
 export { ftp }
 export { zip }
@@ -53,9 +56,6 @@ const build = gulp.series(buildTasks);
 const deployFTP = gulp.series(buildTasks, ftp);
 const deployZIP = gulp.series(buildTasks, zip);
 
-
-
-1
 // Експорт сценаріїв
 export { development }
 export { build }
