@@ -47,7 +47,6 @@ if (galleries.length) {
 				// plugins: [lgZoom, lgThumbnail],
 				licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',
 				speed: 500,
-				selector: ".gallery__image"
 			})
 		})
 	});

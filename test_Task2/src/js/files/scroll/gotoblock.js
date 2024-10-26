@@ -14,14 +14,13 @@ export let gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 
 		if (noHeader) {
 			headerItem = 'header.header';
 			const headerElement = document.querySelector(headerItem);
-			const headerContainer = headerElement.querySelector('.header__container')
 			if (!headerElement.classList.contains('_header-scroll')) {
-				headerContainer.style.cssText = `transition-duration: 0s;`;
+				headerElement.style.cssText = `transition-duration: 0s;`;
 				headerElement.classList.add('_header-scroll');
 				headerItemHeight = headerElement.offsetHeight;
 				headerElement.classList.remove('_header-scroll');
 				setTimeout(() => {
-					headerContainer.style.cssText = ``;
+					headerElement.style.cssText = ``;
 				}, 0);
 			} else {
 				headerItemHeight = headerElement.offsetHeight;

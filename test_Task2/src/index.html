@@ -1,466 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('html/_head.htm',{
-"title":"HomePage"
-})
-
+@@include('html/_head.htm',{})
 <body>
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
 		<main class="page">
-			<section data-watch="navigator" class="hero">
-				<div class="hero__container">
-					<div class="hero__body">
-						<div class="hero__content">
-							<h1 class="hero__title">A better world for pets</h1>
-							<a href="" class="hero__button button button--border"><span>Explore</span></a>
-						</div>
-					</div>
-					<div class="hero__slider swiper">
-						<div class="hero__wrapper swiper-wrapper">
-							<div class="hero__slide slide-hero swiper-slide">
-								<div data-swiper-parallax-x="40%" data-swiper-parallax-scale="0.2"
-									class="slide-hero__content">
-									<div class="slide-hero__body">
-										<img src="@img/hero/pets/01.png" alt="image" class="slide-hero__image">
-									</div>
-								</div>
-							</div>
-							<div class="hero__slide slide-hero swiper-slide">
-								<div data-swiper-parallax-x="40%" data-swiper-parallax-scale="0.2"
-									class="slide-hero__content">
-									<div class="slide-hero__body">
-										<img src="@img/hero/pets/01.png" alt="image" class="slide-hero__image">
-									</div>
-								</div>
-							</div>
-							<div class="hero__slide slide-hero swiper-slide">
-								<div data-swiper-parallax-x="40%" data-swiper-parallax-scale="0.2"
-									class="slide-hero__content">
-									<div class="slide-hero__body">
-										<img src="@img/hero/pets/01.png" alt="image" class="slide-hero__image">
-									</div>
-								</div>
-							</div>
-							<div class="hero__slide slide-hero swiper-slide">
-								<div data-swiper-parallax-x="40%" data-swiper-parallax-scale="0.2"
-									class="slide-hero__content">
-									<div class="slide-hero__body">
-										<img src="@img/hero/pets/01.png" alt="image" class="slide-hero__image">
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-					<div class="hero__controll">
-						<button type="button" class="hero__arrow hero__arrow--left _icon-slider-arrow"></button>
-						<button type="button" class="hero__arrow hero__arrow--right _icon-slider-arrow">
-						</button>
-					</div>
-				</div>
-				<img class="hero__bg" src="@img/hero/bg.jpg" alt="Hero Background">
-				<a href="#" data-goto=".hero" class="up _icon-slider-arrow"></a>
-
-			</section>
-			<section data-prlx-parent data-watch="navigator" class="about-us">
-				<div class="about-us__container">
-					<div class="about-us__body">
-						<div data-prlx class="about-us__image">
-							<img src="@img/about/image.jpg" alt="image">
-						</div>
-						<div class="about-us__content">
-							<div class="about-us__block-header block-header">
-								<div class="block-header__label">
-									About us
-								</div>
-								<h2 class="block-header__title">Treating pet like Royalty</h2>
-								<div class="block-header__text">
-									<blockquote>“They’re not just pets, they’re family”</blockquote>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam mi id augue
-										ultrices, in
-										tempus
-										elit tristique. Aliquam ultrices sem non.</p>
-								</div>
-								<a href="#" class="block-header__button button"><span>Explore</span></a>
-							</div>
-						</div>
-					</div>
-					<div class="about-us__servicers servicers-about-us">
-						<div class="servicers-about-us__item">
-							<div class="servicers-about-us__icon">
-								<img src="@img/about/icons/01.svg" alt="image">
-							</div>
-							<div class="servicers-about-us__label">Pet food</div>
-						</div>
-						<div class="servicers-about-us__item">
-							<div class="servicers-about-us__icon">
-								<img src="@img/about/icons/02.svg" alt="image">
-							</div>
-							<div class="servicers-about-us__label">Pet care</div>
-						</div>
-						<div class="servicers-about-us__item">
-							<div class="servicers-about-us__icon">
-								<img src="@img/about/icons/03.svg" alt="image">
-							</div>
-							<div class="servicers-about-us__label">Pet accessories</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section data-watch="navigator" class="products">
-				<div class="products__container">
-					<div class="products__block-header block-header block-header--center">
-						<div class="block-header__label">
-							Our Products
-						</div>
-						<h2 class="block-header__title">For all your pet needs</h2>
-						<div class="block-header__text">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam mi id augue
-								ultrices, in tempus elit.</p>
-						</div>
-					</div>
-					<div class="products__items">
-						<article data-watch class="products__item item-product">
-							<div class="item-product__header">
-								<div class="item-product__image-ibg_contain">
-									<img src="@img/products/01.png" alt="image">
-								</div>
-								<button class="item-product__add-to-cart button">
-									<span> Add to cart</span>
-								</button>
-							</div>
-							<div class="item-product__body">
-								<h4 class="item-product__title">
-									<a href="" class="item-product__link-title">Luxury pet bed</a>
-								</h4>
-								<div class="item-product__price">$120</div>
-								<div class="item-product____rating rating">
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item"></div>
-								</div>
-							</div>
-						</article>
-						<article data-watch class="products__item item-product">
-							<div class="item-product__header">
-								<div class="item-product__image-ibg_contain">
-									<img src="@img/products/02.png" alt="image">
-								</div>
-								<button class="item-product__add-to-cart button">
-									<span> Add to cart</span>
-								</button>
-							</div>
-							<div class="item-product__body">
-								<h4 class="item-product__title">
-									<a href="" class="item-product__link-title">Luxury pet bed</a>
-								</h4>
-								<div class="item-product__price">$120</div>
-								<div class="item-product____rating rating">
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item"></div>
-								</div>
-							</div>
-						</article>
-						<article data-watch class="products__item item-product">
-							<div class="item-product__header">
-								<div class="item-product__image-ibg_contain">
-									<img src="@img/products/01.png" alt="image">
-								</div>
-								<button class="item-product__add-to-cart button">
-									<span> Add to cart</span>
-								</button>
-							</div>
-							<div class="item-product__body">
-								<h4 class="item-product__title">
-									<a href="" class="item-product__link-title">Luxury pet bed</a>
-								</h4>
-								<div class="item-product__price">$120</div>
-								<div class="item-product____rating rating">
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item"></div>
-								</div>
-							</div>
-						</article>
-						<article data-watch class="products__item item-product">
-							<div class="item-product__header">
-								<div class="item-product__image-ibg_contain">
-									<img src="@img/products/02.png" alt="image">
-								</div>
-								<button class="item-product__add-to-cart button">
-									<span> Add to cart</span>
-								</button>
-							</div>
-							<div class="item-product__body">
-								<h4 class="item-product__title">
-									<a href="" class="item-product__link-title">Luxury pet bed</a>
-								</h4>
-								<div class="item-product__price">$120</div>
-								<div class="item-product____rating rating">
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item"></div>
-								</div>
-							</div>
-						</article>
-						<article data-watch class="products__item item-product">
-							<div class="item-product__header">
-								<div class="item-product__image-ibg_contain">
-									<img src="@img/products/01.png" alt="image">
-								</div>
-								<button class="item-product__add-to-cart button">
-									<span> Add to cart</span>
-								</button>
-							</div>
-							<div class="item-product__body">
-								<h4 class="item-product__title">
-									<a href="" class="item-product__link-title">Luxury pet bed</a>
-								</h4>
-								<div class="item-product__price">$120</div>
-								<div class="item-product____rating rating">
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item"></div>
-								</div>
-							</div>
-						</article>
-						<article data-watch class="products__item item-product">
-							<div class="item-product__header">
-								<div class="item-product__image-ibg_contain">
-									<img src="@img/products/02.png" alt="image">
-								</div>
-								<button class="item-product__add-to-cart button">
-									<span> Add to cart</span>
-								</button>
-							</div>
-							<div class="item-product__body">
-								<h4 class="item-product__title">
-									<a href="" class="item-product__link-title">Luxury pet bed</a>
-								</h4>
-								<div class="item-product__price">$120</div>
-								<div class="item-product____rating rating">
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item"></div>
-								</div>
-							</div>
-						</article>
-						<article data-watch class="products__item item-product">
-							<div class="item-product__header">
-								<div class="item-product__image-ibg_contain">
-									<img src="@img/products/01.png" alt="image">
-								</div>
-								<button class="item-product__add-to-cart button">
-									<span> Add to cart</span>
-								</button>
-							</div>
-							<div class="item-product__body">
-								<h4 class="item-product__title">
-									<a href="" class="item-product__link-title">Luxury pet bed</a>
-								</h4>
-								<div class="item-product__price">$120</div>
-								<div class="item-product____rating rating">
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item"></div>
-								</div>
-							</div>
-						</article>
-						<article data-watch class="products__item item-product">
-							<div class="item-product__header">
-								<div class="item-product__image-ibg_contain">
-									<img src="@img/products/02.png" alt="image">
-								</div>
-								<button class="item-product__add-to-cart button">
-									<span> Add to cart</span>
-								</button>
-							</div>
-							<div class="item-product__body">
-								<h4 class="item-product__title">
-									<a href="" class="item-product__link-title">Luxury pet bed</a>
-								</h4>
-								<div class="item-product__price">$120</div>
-								<div class="item-product____rating rating">
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item rating__item--active"></div>
-									<div class="rating__item"></div>
-								</div>
-							</div>
-						</article>
-					</div>
-					<a href="#" class="products__button button"><span>Explore</span></a>
-				</div>
-			</section>
-			<section data-prlx-parent data-watch="navigator" class="services">
-				<div class="services__container">
-					<div data-prlx class="services__image">
-						<img src="@img/services/cat.jpg" alt="image">
-					</div>
-					<div class="services__block-header block-header block-header--white">
-						<div class="block-header__label">
-							our services
-						</div>
-						<h2 class="block-header__title">Quality Things for Loving Pets</h2>
-						<div class="block-header__text">
-							<blockquote>“More than a Pet Store…”</blockquote>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam mi id augue
-								ultrices, in tempus elit tristique. Aliquam ultrices sem non.</p>
-						</div>
-						<a href="#" class="block-header__button button button--border"><span>Explore</span></a>
-					</div>
-				</div>
-			</section>
-			<div data-prlx-parent class="gallery">
-				<div data-gallery class="gallery__container">
-					<div data-prlx class="gallery__item">
-						<a href="@img/gallery/01.jpg" class="gallery__image">
-							<img data-src="@img/gallery/01.jpg" alt="image">
-						</a>
-						<a href="#" class="gallery__link _icon-slider-arrow">
-							<span>Taking dogs care to the net level</span>
-						</a>
-					</div>
-					<div data-prlx class="gallery__item">
-						<a href="@img/gallery/02.jpg" class="gallery__image">
-							<img data-src="@img/gallery/02.jpg" alt="image">
-						</a>
-						<a href="#" class="gallery__link _icon-slider-arrow">
-							<span>Taking dogs care to the net level</span>
-						</a>
-					</div>
-					<div data-prlx class="gallery__item">
-						<a href="@img/gallery/03.jpg" class="gallery__image">
-							<img data-src="@img/gallery/03.jpg" alt="image">
-						</a>
-						<a href="#" class="gallery__link _icon-slider-arrow">
-							<span>Taking dogs care to the net level</span>
-						</a>
-					</div>
-					<div data-prlx class="gallery__item">
-						<a href="@img/gallery/04.jpg" class="gallery__image">
-							<img data-src="@img/gallery/04.jpg" alt="image">
-						</a>
-						<a href="#" class="gallery__link _icon-slider-arrow">
-							<span>Taking dogs care to the net level</span>
-						</a>
-					</div>
-				</div>
-			</div>
-			<section data-prlx-parent data-watch class="contacts">
-				<div class="contacts__container">
-					<div class="contacts__media media-contacts">
-						<div class="media-contacts__images">
-							<div class="media-contacts__block-image">
-								<img data-prlx class="media-contacts__image" src="@img/contacts/01-copy.jpg"
-									alt="image">
-								<a href="#" target="_blank" class="media-contacts__play _icon-play"><span></span>
-								</a>
-							</div>
-							<div class="media-contacts__block-image">
-								<img data-prlx class="media-contacts__image" src="@img/contacts/02-copy.jpg"
-									alt="image">
-							</div>
-						</div>
-
-					</div>
-					<div class="contacts__block-header block-header">
-						<div class="block-header__label">
-							Contact us
-						</div>
-						<h2 class="block-header__title">Come for the care, leave with a smile</h2>
-						<adress class="block-header__contacts contacts-items">
-							<ul class="contacts-items__item _icon-clock">
-								<li>Monday/Friday 9:00-23:00</li>
-								<li>Saturday 10:00-21:00</li>
+			<section class="petNaturals">
+				<div class="petNaturals__container">
+					<h1>Pet Naturals of Vermont Calming for Cats</h1>
+					<div class="petNaturals__body">
+						<div class="petNaturals__text text-petNaturals">
+							<p class="text-petNaturals__title">Your cat deserves the best pet supplement the world has
+								to offer.
+								That's what's in the package. </p>
+							<ul class="petNaturals__list list-petNaturals">
+								<li class="list-petNaturals__item">Features a patented calming blend</li>
+								<li class="list-petNaturals__item">Doesn’t contain herbal ingredients</li>
+								<li class="list-petNaturals__item">Helps manage everyday stress </li>
 							</ul>
-							<ul class="contacts-items__item _icon-location">
-								<li><a href="tel:+0123456789">+012-345-6789</a></li>
-								<li><a href="mailto:TheWildKingdom@contact.com">TheWildKingdom@contact.com</a></li>
-								<li>9889 Lorem Ipsum street, Pellentesque, CA, USA</li>
-							</ul>
-						</adress>
-						<a href="#" class="block-header__button button"><span>Contact</span></a>
+						</div>
+						<div class="petNaturals__image">
+							<img src="@img/01/feed.png" alt="feed">
+							<!-- <img src="" alt=""> -->
+						</div>
+						<div class="petNaturals__form form">
+							<div class="form__info">
+								<p class="form__title">TIME LEFT</p>
+								<p class="form__time">2:00:00</p>
+								<p class="form__price"><span>120uah</span> 60uah</p>
+							</div>
+							<div class="form__box">
+								<form class="form__body" action="#">
+									<div class="form__input">
+										<input type="text" placeholder="Name" class="">
+									</div>
+									<div class="form__input">
+										<input type="tel" maxlength="13" placeholder="+38(0_)__-_-_" class="">
+									</div>
+									<button type="button" class="form__button">Order</button>
+								</form>
+								<p class="form__orderDate">Order date: 17.11.2021</p>
+
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
-			<section data-watch class="reviews">
-				<div class="reviews__container">
-					<div class="reviews__slider swiper">
-						<div class="reviews__wrapper swiper-wrapper">
-							<div class="reviews__slide swiper-slide">
-								<div class="reviews__icon">
-									<img src="@img/contacts/icons/chat.svg" alt="image">
-								</div>
-								<blockquote class="reviews__item">
-									<div class="reviews__text">
-										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas sequi
-											alias,
-											tempora minus enim vel itaque, fugiat unde vitae in non nihil. Deserunt,
-											natus
-											dolorum exercitationem earum voluptas at maiores</p>
-									</div>
-									<cite class="reviews__author">Etiam vulputate</cite>
-
-
-								</blockquote>
+			<section class="manufacturer">
+				<div class="manufacturer__container">
+					<h2>From the manufacturer</h2>
+					<div class="items-box">
+						<div class="items-box__item">
+							<div class="items-box__image">
+								<img src="@img/02/01.png" alt="1">
 							</div>
-							<div class="reviews__slide swiper-slide">
-								<div class="reviews__icon">
-									<img src="@img/contacts/icons/chat.svg" alt="image">
-								</div>
-								<blockquote class="reviews__item">
-									<div class="reviews__text">
-										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas sequi
-											alias,
-											tempora minus enim vel itaque, fugiat unde vitae in non nihil. Deserunt,
-											natus
-											dolorum exercitationem earum voluptas at maiores</p>
-										tempora minus enim vel itaque, fugiat unde vitae in non nihil. Deserunt,
-										natus
-										dolorum exercitationem earum voluptas at maiores</p>
-									</div>
-
-									<cite class="reviews__author">Etiam vulputate</cite>
-								</blockquote>
-							</div>
-							<div class="reviews__slide swiper-slide">
-								<div class="reviews__icon">
-									<img src="@img/contacts/icons/chat.svg" alt="image">
-								</div>
-								<blockquote class="reviews__item">
-									<div class="reviews__text">
-										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas sequi
-											alias,
-											tempora minus enim vel itaque, fugiat unde vitae in non nihil. Deserunt,
-											natus
-											dolorum exercitationem earum voluptas at maiores</p>
-									</div>
-
-									<cite class="reviews__author">Etiam vulputate</cite>
-								</blockquote>
+							<div class="items-box__text text-items-box">
+								<p class="text-items-box__title">Keep Calm and Carry On</p>
+								<p class="text-items-box__body">Are you searching for a better way to ease your pet’s
+									separation anxiety or stress? Calming chews help relieve
+									pet stress without corn, wheat or artificial ingredients. </p>
 							</div>
 						</div>
-						<div class="reviews__arrows">
-							<button class="reviews__arrow reviews__arrow--prev _icon-slider-arrow"></button>
-							<button class="reviews__arrow reviews__arrow--next _icon-slider-arrow"></button>
+						<div class="items-box__item">
+							<div class="items-box__image">
+								<img src="@img/02/02.png" alt="2">
+							</div>
+							<div class="items-box__text text-items-box">
+								<p class="text-items-box__title">Peace of Mind</p>
+								<p class="text-items-box__body">Pet Naturals of Vermont’s research-backed formula makes
+									it safe to double or triple the amount in times of added stress. </p>
+							</div>
+						</div>
+						<div class="items-box__item">
+							<div class="items-box__image">
+								<img src="@img/02/03.png" alt="3">
+
+							</div>
+							<div class="items-box__text text-items-box">
+								<p class="text-items-box__title">More than a Tasty Treat</p>
+								<p class="text-items-box__body">Don’t let its satisfying chicken liver flavor fool you.
+									Technically, Calming isn’t a treat but it sure tastes like one. Reward your best
+									buddy with a Calming chew. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="bestUses">
+				<div class="bestUses__container">
+					<h3>Best Uses for Calming Chews</h3>
+					<div class="bestUses__body">
+						<div class="bestUses__text">
+							<p> rides. Vet visits. Thunderstorms. Boarding. Parties. These are just a handful of times
+								when Calming chews may come in handy. Does your dog hate to be left home alone? Does
+								your cat love hiding under the bed? Serve up a Calming chew to help soothe your furry
+								pal’s anxiety and make your life easier, too!</p>
+
+							<p>For Best Results:</p>
+
+							<p>We recommend administering Calming chews 30 minutes prior to a stressful event. The
+								30-minute activation period gives you a chance to increase dosage if you’re not seeing
+								expected results. Calming is safe for unique stress inducing events and for long-term
+								use to help manage everyday stress.</p>
+						</div>
+						<div class="bestUses__image">
+							<img src="@img/03/01.png" alt="1">
 						</div>
 					</div>
 				</div>
@@ -468,7 +112,7 @@
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>
-	@@include('html/_js.htm', {})
+	@@include('html/_js.htm',{})
 </body>
 
 </html>
