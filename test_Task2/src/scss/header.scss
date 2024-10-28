@@ -9,8 +9,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding-top: 23px;
-		padding-bottom: rem(23);
+		padding-top: rem(23);
 	}
 
 	// .header__logo
@@ -46,7 +45,6 @@
 	width: 41%;
 	@include adaptiveValue("padding-top", 41, 20);
 	@include adaptiveValue("padding-bottom", 38, 20);
-	// padding-top: rem(41);
 	padding-bottom: rem(38);
 
 	@media (max-width:$mobile) {
@@ -66,7 +64,7 @@
 	&__item {
 		font-weight: 700;
 		@include adaptiveValue("font-size", 20, 14);
-		font-size: 20px;
+		font-size: rem(20);
 		color: $brown;
 
 		&:hover {
@@ -78,8 +76,6 @@
 
 .burger-menu {
 	position: absolute;
-	// display: none;
-
 	background-color: #fff;
 	z-index: 10;
 	width: 0;
@@ -156,7 +152,7 @@
 			position: absolute;
 			width: 100%;
 			height: rem(2);
-			background-color: #000;
+			background-color: #F9E994;
 		}
 
 		&::before {
@@ -177,7 +173,9 @@
 			}
 
 			&::before,
-			&::after {}
+			&::after {	
+				background-color: #715D00;
+			}
 
 			&::before {
 				top: calc(50% - rem(1));
