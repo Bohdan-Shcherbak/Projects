@@ -6,7 +6,7 @@ function drawBackground(background, context, sprites) {
             }
         }
     });
-}
+};
 
 export function createBackgroundLayer(backgrounds, sprites) {
     const buffer = document.createElement('canvas');
@@ -17,7 +17,14 @@ export function createBackgroundLayer(backgrounds, sprites) {
         drawBackground(background, buffer.getContext('2d'), sprites);
     });
     return function drawBackgroundLayer(context) {
-        context.drawImage(backgroundBuffer, 0, 0);
-
+        context.drawImage(buffer, 0, 0);
     }
 };
+
+export function createSpriteLayer(entities) {
+    return function drawSpriteLayer(context) {
+        entities.forEach(entity => {
+                    entity.draw(context);
+        });
+    };
+}

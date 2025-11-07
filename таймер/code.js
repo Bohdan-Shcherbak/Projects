@@ -1,64 +1,167 @@
 // "use strict"
-const windowNum = document.querySelector('.windowNum');
+const windowNum = document.querySelector('.timer__input');
+let timer = document.querySelector('.timer__work');
 
-const $hours = document.querySelector('.timer__hours');
-const $minutes = document.querySelector('.timer__minutes');
-const $seconds = document.querySelector('.timer__seconds');
+const $hours = document.querySelector('.work__hours');
+const $minutes = document.querySelector('.work__minutes');
+const $seconds = document.querySelector('.work__seconds');
 
 let butt__start = document.querySelector('.butt__start');
 let butt__stop = document.querySelector('.butt__stop');
+let reset = document.querySelector('.reset');
+let left = document.querySelectorAll('.left');
+let right = document.querySelectorAll('.right');
 
-let timer = document.querySelector('.timer__container');
+let counterMs = 0;
 
 let initHours = document.querySelector('.initial__hours');
 let initMinutes = document.querySelector('.initial__minutes');
 let initSeconds = document.querySelector('.initial__seconds');
 
-let textMinutes = document.querySelector('.text-minutes');
-let textSeconds = document.querySelector('.text-seconds');
+let textMinutes = document.querySelector('.title-minutes');
+let textSeconds = document.querySelector('.title-seconds');
 
-let reset = document.querySelector('.reset');
+let numbHours;
+let numbMinutes;
+let numbSeconds;
+
+let NewnumbHours = 0;
+let NewnumbMinutes = 0;
+let NewnumbSeconds = 0;
 
 let hoursAnimation = document.querySelector('.hours-animation');
 let minutesAnimation = document.querySelector('.minutes-animation');
 let secondsAnimation = document.querySelector('.seconds-animation');
 
-let left = document.querySelectorAll('.left');
-let right = document.querySelectorAll('.right');
+let presentDegSeconds;
+let presentDegMinutes;
+let presentDegHours;
 
-let nuumbHours;
-let nuumbMinutes;
-let nuumbSeconds;
+let oldPresentDegMinutes;
 
-let timerId;
+let diffDegSeconds;
+let diffDegMinutes;
+let diffDegHours;
 
-let NewnuumbHours = 0;
-let NewnuumbMinutes = 0;
-let NewnuumbSeconds = 0;
 
-let percentDegHours;
-let percentDegMinutes;
-let percentDegSeconds;
+const workerCode = `
+    let timerId = null;
 
-let difftDegHours;
-let difftDegMinutes;
+    self.onmessage = function (event) {
+        if (event.data.action === "start") {
+            if (!timerId) {
+                timerId = setInterval(() => {
+                    postMessage("run"); // Відправляємо сигнал у головний потік
+                }, event.data.interval);
+            }
+        } else if (event.data.action === "stop") {
+            clearInterval(timerId);
+            timerId = null;
+        }
+    };
+`;
 
-let presentDegMinutes = 360;
-let presentDegHour = 360;
-let presentDeg;
-let nextDeg;
-let diffDeg;
+const workerBlob = new Blob([workerCode], { type: "application/javascript" });
+const worker = new Worker(URL.createObjectURL(workerBlob));
 
-let counter = 0;
-let newDeg;
-let newDegMinutes;
-let newDegHour;
+function recurs() {    
+    function declensionNum(num, words) {
+        return words[(num % 100 > 4 && num % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]];
+    }
 
-function percentDeg(a) {
-    return 360 / a
+    if (counterMs == 4) {
+
+        if (numbSeconds > 0) {
+            numbSeconds = numbSeconds - 1;
+
+            presentDegSeconds -= diffDegSeconds;
+
+            secondsAnimation.style.cssText = `
+            background-image:conic-gradient(#fff ${presentDegSeconds}deg, transparent 0);`
+            
+            presentDegMinutes -= diffDegMinutes;
+            
+            minutesAnimation.style.cssText = `
+            background-image:conic-gradient(#fff ${presentDegMinutes}deg, transparent 0);`
+            
+            presentDegHours -= diffDegHours;
+            hoursAnimation.style.cssText = `
+            background-image:conic-gradient(#fff ${presentDegHours}deg, transparent 0);`
+
+            counterMs = 0;
+        } else if (numbMinutes > 0) {
+            numbMinutes = numbMinutes - 1;
+            numbSeconds = 59;
+            presentDegSeconds = 360;            
+
+            secondsAnimation.style.cssText = `
+            background-image:conic-gradient(#fff ${presentDegSeconds}deg, transparent 0);`
+            
+            presentDegMinutes -= diffDegMinutes;
+            minutesAnimation.style.cssText = `
+            background-image:conic-gradient(#fff ${presentDegMinutes}deg, transparent 0);`
+
+            presentDegHours -= diffDegHours;
+            hoursAnimation.style.cssText = `
+            background-image:conic-gradient(#fff ${presentDegHours}deg, transparent 0);`
+            
+            counterMs = 0;
+        } else if (numbHours > 0) {
+            numbHours = numbHours - 1;
+            numbMinutes = 59;
+            numbSeconds = 59;
+
+            presentDegSeconds = presentDegMinutes = 360;
+
+            secondsAnimation.style.cssText = `
+            background-image:conic-gradient(#fff ${presentDegSeconds}deg, transparent 0);`
+
+            minutesAnimation.style.cssText = `
+            background-image:conic-gradient(#fff ${presentDegMinutes}deg, transparent 0);`
+
+            presentDegHours -= diffDegHours;
+            hoursAnimation.style.cssText = `
+            background-image:conic-gradient(#fff ${presentDegHours}deg, transparent 0);`
+
+            counterMs = 0;
+        } else {
+            prompt('Конец времени');
+            worker.postMessage({
+                action:'start',
+                interval:200,
+                message: "Виклик func1!",
+            })
+        }
+        } else {
+            presentDegSeconds -= diffDegSeconds;
+            secondsAnimation.style.cssText = `
+            background-image:conic-gradient(#fff ${presentDegSeconds}deg, transparent 0);`
+
+            presentDegMinutes -= diffDegMinutes;
+
+            minutesAnimation.style.cssText = `
+            background-image:conic-gradient(#fff ${presentDegMinutes}deg, transparent 0);`
+
+            presentDegHours -= diffDegHours;
+            hoursAnimation.style.cssText = `
+            background-image:conic-gradient(#fff ${presentDegHours}deg, transparent 0);`
+
+            counterMs++
+        }
+
+    $hours.textContent = numbHours;
+    $minutes.textContent = numbMinutes < 10 ? '0' + numbMinutes : numbMinutes;
+    $seconds.textContent = numbSeconds < 10 ? '0' + numbSeconds : numbSeconds;
+    $hours.dataset.title = declensionNum(numbHours, ['година', 'години', 'годин']);
+    $minutes.dataset.title = declensionNum(numbMinutes, ['хвилина', 'хвилини', 'хвилин']);
+    $seconds.dataset.title = declensionNum(numbSeconds, ['секунда', 'секунди', 'секунд']);
 }
 
-butt__start.addEventListener('click', () => {
+worker.onmessage = function(){
+        recurs()
+}
+
+function start(){
     if (initSeconds.value > 60) {
         initSeconds.classList.add('invalid');
         textSeconds.classList.add('invalid')
@@ -75,146 +178,67 @@ butt__start.addEventListener('click', () => {
         windowNum.classList.add('windowNone');
         timer.classList.remove('windowNone');
 
-        if (NewnuumbSeconds == 0 && NewnuumbMinutes == 0 && NewnuumbHours == 0) {
-            nuumbHours = initHours.value;
-            nuumbMinutes = initMinutes.value;
-            nuumbSeconds = initSeconds.value;
-        } else {
-            nuumbHours = NewnuumbHours;
-            nuumbMinutes = NewnuumbMinutes;
-            nuumbSeconds = NewnuumbSeconds;
+        // для кнопки стопу, щоб продовжити таймер - числа
+        if (NewnumbSeconds + NewnumbMinutes + NewnumbHours !== 0) {
+            numbHours = NewnumbHours;
+            numbMinutes = NewnumbMinutes;
+            numbSeconds = NewnumbSeconds;    
+            presentDegMinutes = oldPresentDegMinutes;            
+        } else{
+            numbHours = initHours.value;
+            numbMinutes = initMinutes.value;
+            numbSeconds = initSeconds.value;
+
+            presentDegMinutes = (numbMinutes / 60) * 360;
+            if(numbHours == 0) 
+                {presentDegHours = 0}
+            else{presentDegHours = 360}
         }
+        presentDegSeconds = (numbSeconds / 60) * 360;
+        
+        diffDegSeconds = 1.2;
+        diffDegMinutes = 0.02;
 
-        percentDegHours = percentDeg(nuumbHours);
-        difftDegHours = ((360 / (nuumbHours * 60 * 60)) / 5);
-        hoursAnimation.style.cssText = `background-image:conic-gradient(#fff ${nuumbHours * percentDegHours}deg, transparent 0);`
+        secondsAnimation.style.cssText = 
+        `background-image:conic-gradient(#fff ${presentDegSeconds}deg, transparent 0);`
+        
+        minutesAnimation.style.cssText = 
+        `background-image:conic-gradient(#fff ${presentDegMinutes}deg, transparent 0);`
 
-        difftDegMinutes = ((360 / (nuumbMinutes * 60)) / 5);
-        minutesAnimation.style.cssText = `background-image:conic-gradient(#fff ${nuumbMinutes * percentDegMinutes}deg, transparent 0);`
+        diffDegHours = 360 / (numbHours * 60 * 60) / 5;
 
-        percentDegSeconds = percentDeg(nuumbSeconds);
-        secondsAnimation.style.cssText = `background-image:conic-gradient(#fff ${nuumbSeconds * percentDegSeconds}deg, transparent 0);`
+        hoursAnimation.style.cssText = 
+        `background-image:conic-gradient(#fff ${presentDegHours}deg, transparent 0);`
 
-        presentDeg = nuumbSeconds * percentDegSeconds;
-        nextDeg = (nuumbSeconds - 1) * percentDegSeconds;
-        diffDeg = (nextDeg - presentDeg) / 5;
-        newDeg = presentDeg;
-
-        newDegMinutes = presentDegMinutes;
-        newDegHour = presentDegHour;
-
-
+        
         butt__stop.classList.add('stop-active');
 
-        timerId = setInterval(recurs, 200);
+        worker.postMessage({
+            action:'start',
+            interval:200,
+            message: "Виклик func1!",
+        })
     }
-})
+}
 
-butt__stop.addEventListener('click', () => {
-    NewnuumbHours = nuumbHours;
-    NewnuumbMinutes = nuumbMinutes;
-    NewnuumbSeconds = nuumbSeconds;
-    clearInterval(timerId);
+function stop(){
+    NewnumbHours = numbHours;
+    NewnumbMinutes = numbMinutes;
+    NewnumbSeconds = numbSeconds;
+    oldPresentDegMinutes = presentDegMinutes;
+
+    worker.postMessage({
+        action:'stop'
+    })
     butt__stop.classList.remove('stop-active')
 }
-);
 
-function recurs() {
-    // склонение числительных
-    function declensionNum(num, words) {
-        return words[(num % 100 > 4 && num % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]];
-    }
-
-    if (counter == 4) {
-        if (nuumbSeconds > 0) {
-            nuumbSeconds = nuumbSeconds - 1;
-            presentDeg = nuumbSeconds * percentDegSeconds;
-            nextDeg = (nuumbSeconds - 1) * percentDegSeconds;
-            diffDeg = (nextDeg - presentDeg) / 5;
-            newDeg = presentDeg;
-            secondsAnimation.style.cssText = `
-            background-image:conic-gradient(#fff ${newDeg}deg, transparent 0);`
-
-            newDegMinutes = newDegMinutes - difftDegMinutes;
-            minutesAnimation.style.cssText = `
-            background-image:conic-gradient(#fff ${newDegMinutes}deg, transparent 0);`
-
-            newDegHour = newDegHour - difftDegHours;
-
-            hoursAnimation.style.cssText = `
-            background-image:conic-gradient(#fff ${newDegHour}deg, transparent 0);`
-            counter = 0;
-        } else if (nuumbMinutes > 0) {
-            nuumbMinutes = nuumbMinutes - 1;
-            nuumbSeconds = 59;
-            presentDeg = 360;
-            nextDeg = 59 * 6;
-            diffDeg = (nextDeg - presentDeg) / 5;
-            newDeg = presentDeg;
-
-            percentDegSeconds = percentDeg(59);
-
-            newDegMinutes -= difftDegMinutes;
-            minutesAnimation.style.cssText = `
-            background-image:conic-gradient(#fff ${newDegMinutes}deg, transparent 0);`
-
-
-            secondsAnimation.style.cssText = `
-            background-image:conic-gradient(#fff 360deg, transparent 0);`
-            counter = 0;
-
-        } else if (nuumbHours > 0) {
-            nuumbHours = nuumbHours - 1;
-            nuumbMinutes = 59;
-            nuumbSeconds = 60;
-            percentDegSeconds = percentDeg(nuumbSeconds);
-
-            newDegMinutes = 360;
-            difftDegMinutes = (360 / (nuumbMinutes * 60) / 5);
-            newDegMinutes -= difftDegMinutes;
-            minutesAnimation.style.cssText = `
-            background-image:conic-gradient(#fff ${newDegMinutes}deg, transparent 0);`
-
-            newDegHour -= difftDegHours;
-
-            hoursAnimation.style.cssText = `
-            background-image:conic-gradient(#fff ${newDegHour}deg, transparent 0);`
-            counter = 0;
-
-
-        } else {
-            prompt('Конец времени');
-            clearInterval(timerID);
-        }
-    } else {
-        newDeg += diffDeg;
-
-        secondsAnimation.style.cssText = `
-        background-image:conic-gradient(#fff ${newDeg}deg, transparent 0);`
-
-        newDegMinutes -= difftDegMinutes;
-        minutesAnimation.style.cssText = `
-        background-image:conic-gradient(#fff ${newDegMinutes}deg, transparent 0);`
-        counter++;
-
-        newDegHour -= difftDegHours;
-
-        hoursAnimation.style.cssText = `
-        background-image:conic-gradient(#fff ${newDegHour}deg, transparent 0);`
-    }
-
-    $hours.textContent = nuumbHours;
-    $minutes.textContent = nuumbMinutes < 10 ? '0' + nuumbMinutes : nuumbMinutes;
-    $seconds.textContent = nuumbSeconds < 10 ? '0' + nuumbSeconds : nuumbSeconds;
-    $hours.dataset.title = declensionNum(nuumbHours, ['година', 'години', 'годин']);
-    $minutes.dataset.title = declensionNum(nuumbMinutes, ['хвилина', 'хвилини', 'хвилин']);
-    $seconds.dataset.title = declensionNum(nuumbSeconds, ['секунда', 'секунди', 'секунд']);
-}
-
+butt__start.addEventListener('click', start);
+butt__stop.addEventListener('click', stop);
 
 left.forEach(e => {
     e.addEventListener('click', () => {
-        let clickParent = e.closest('.windowNum__block');
+        let clickParent = e.closest('.input__item');
         let clickParentClass = clickParent.classList[1];
         let classToId = '#' + clickParentClass;
         let leftInput = clickParent.querySelector(`${classToId}`);
@@ -227,12 +251,10 @@ left.forEach(e => {
 
 right.forEach(e => {
     e.addEventListener('click', () => {
-        let clickParentR = e.closest('.windowNum__block');
+        let clickParentR = e.closest('.input__item');
         let clickParentClassR = clickParentR.classList[1];
         let classToIdR = '#' + clickParentClassR;
         let rightInput = clickParentR.querySelector(`${classToIdR}`);
-        console.log(typeof (rightInput.value));
-        console.log(String(rightInput.value.length));
         if (String(rightInput.value).length == 0) {
             rightInput.value = 0;
         }
@@ -243,16 +265,17 @@ right.forEach(e => {
 });
 
 reset.addEventListener('click', () => {
-    clearInterval(timerId);
+    worker.postMessage({
+        action:'stop'
+    })
     butt__stop.classList.remove('stop-active')
     windowNum.classList.remove('windowNone');
     timer.classList.add('windowNone');
-    // windowNum.classList.add('windowNone');
-    //     timer.classList.remove('windowNone');
-    nuumbHours = 0;
-    nuumbMinutes = 0;
-    nuumbSeconds = 0;
-    NewnuumbHours = 0;
-    NewnuumbMinutes = 0;
-    NewnuumbSeconds = 0;
+    numbHours = 0;
+    numbMinutes = 0;
+    numbSeconds = 0;
+    NewnumbHours = 0;
+    NewnumbMinutes = 0;
+    NewnumbSeconds = 0;
+    presentDegHours = 360;
 });
